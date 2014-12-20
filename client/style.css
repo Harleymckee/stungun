@@ -1,3 +1,6 @@
+html {
+  background: red; }
+
 #logo {
   position: fixed;
   margin-left: auto;
@@ -28,7 +31,7 @@ img {
   padding-top: 1px;
   height: 750px;
   border-radius: 5px;
-  background: white;
+  background: rgba(47, 50, 50, 0.75);
   -webkit-box-shadow: 1px 1px 30px 0px rgba(47, 50, 50, 0.75);
   -moz-box-shadow: 1px 1px 30px 0px rgba(47, 50, 50, 0.75);
   box-shadow: 1px 1px 30px 0px rgba(47, 50, 50, 0.75); }
