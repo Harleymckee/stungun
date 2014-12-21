@@ -14,15 +14,14 @@ module.exports = function(grunt) {
       }
     },
 
- */
-
+  */
 
 
 
   sass: {                              // Task
     dist: {                            // Target
       files: {                         // Dictionary of files
-        'client/_stylesheets/style.css': 'client/style.scss'       // 'destination': 'source'
+        'client/style.css': 'client/style.scss'       // 'destination': 'source'
       }
     }
   },
@@ -45,12 +44,12 @@ module.exports = function(grunt) {
     watch: {
       css: {
         files: ['client/**/*.css', 'client/**/*.scss'],
-        tasks: ['cssmin', 'sass']
+        tasks: ['sass'] // 'cssmin'
       },
 
       js: {
-        files: ['client/**/*.js'],
-        tasks: ['sass']
+        files: ['client/**/*.js']
+     //   tasks: ['sass']
       }
     },
 
@@ -91,6 +90,6 @@ module.exports = function(grunt) {
 
 
 
-    grunt.registerTask('default', ['sass', 'concurrent']); //'jshint' 'uglify'
+    grunt.registerTask('default', ['sass', 'concurrent']); //'jshint' 'uglify' 'cssmin'
 
 };
