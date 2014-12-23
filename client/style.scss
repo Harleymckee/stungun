@@ -29,17 +29,45 @@ html {
     }
 
 
+    img:hover {     // stungun logo 
+    
+    
+
+    }
+
+
+
+    } // #logo  
+
+
+#logo2 {
+
+        margin-top: 10px;
+    width: 100%; 
+    background-color: transparent;
+
+    left:0px;
+
+
+    img {     // stungun logo 
+        padding: 15px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+    
+
+    }
+
+
     } // #logo  
 
 
 
-
-    
-
-#bod1 {
-	margin-left: auto;
+    #bod1 {
+    margin-left: auto;
     margin-right: auto;
-    width: 90%;
+width: 90%;
     background-color: white;
     //margin-top:10px;
      //   margin-bottom:150px;
@@ -48,12 +76,11 @@ html {
   //  border-radius: 10px;
        background: white; //rgba(47, 50, 50, 0.55)
 
-         border:15px double black; 
+         border:10px solid black; 
 
- /*   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+  -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
 -moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.25);
-box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25); */
-
+box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25); 
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -70,23 +97,44 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25); */
 
 }
 
+@media (min-width:1185px) {
+   #bod1 {
+    width: 85%;
+   }
+
+
+}
+    
+
+
+
 
 
 
 
 .tape {
-    margin-top:5px;
+    margin-top:10px;
+        margin-bottom:10px;
     img {
      border:2px solid black;
  //    border-radius: 10px;
     margin-left: 10px;
     margin-right: 10px;
 
+   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+-moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25); 
+
     }
    
       img:hover {
-     border:2px solid red;
+           cursor: pointer;
+     //border:2px solid red;
   //   border-radius: 10px;
+
+   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
+-moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.55);
+box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.55); 
     }
 
 }
@@ -127,11 +175,16 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25); */
 
         margin: 10px;
             max-height: 40px;
+
     }
 
       div:hover {
-     border:2px solid red;
+
+   //  border:2px solid red;
      cursor: pointer;
+        -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
+-moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.55);
+box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.55); 
   //   border-radius: 10px;
     }
 
@@ -142,15 +195,116 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25); */
 
 .naver {
 
+   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.15);
+-moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.15);
+box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.15); 
 
-
-  border:2px solid black;
+  border:3px solid black; 
 
 }
 
 
 #blog {
     margin-top: 20px;
-    border-top:1px dashed black;
+   // border-top:1px dashed black;
+
 }
 
+
+
+
+h2 {
+        margin-left: auto;
+    margin-right: auto;
+      width:50%; 
+    margin-bottom:0px;
+     margin-top:10px;
+  //   border-top:1px solid black;
+}
+
+h4 {
+    font-weight: 500;
+    margin-bottom:5px;
+       margin-top:0px;
+       font-size: 12px;
+
+}
+
+
+
+
+.blogimg{
+         margin-left: auto;
+    margin-right: auto;
+    img {
+        width: 90%;
+        height: 90%;
+           display:block;
+    margin:auto;
+    margin-top:10px;
+     margin-bottom:25px;
+
+        -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+-moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25); 
+    }
+}
+
+
+
+p {
+      margin-left: auto;
+    margin-right: auto;
+     margin-top:0px;
+    width:90%; 
+
+}
+
+@media (min-width:700px) {
+p {
+      margin-left: auto;
+    margin-right: auto;
+     margin-top:0px;
+    width:50%; 
+
+}
+
+
+.blogimg{
+         margin-left: auto;
+    margin-right: auto;
+    img {
+        width: 65%;
+        height: 65%;
+           display:block;
+    margin:auto;
+    margin-top:10px;
+     margin-bottom:25px;
+
+        -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+-moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25); 
+    }
+}
+
+}
+
+
+    
+
+.post {
+    margin-left: auto;
+    margin-right: auto;
+     margin-top:0px;
+     //width:50%; 
+   // padding-bottom:10px; 
+      
+}
+
+.postend {
+
+ border-bottom:1px dotted black;
+    width:25%;
+       margin-left: auto;
+    margin-right: auto;
+}
