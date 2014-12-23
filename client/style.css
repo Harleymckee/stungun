@@ -5,44 +5,28 @@ html {
   -moz-background-size: cover; }
 
 #logo {
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 10px;
   width: 100%;
   background-color: transparent;
-  bottom: 10px;
-   /* margin-top:10px;
-
-    
-    -webkit-box-shadow: 1px 1px 30px 0px rgba(47, 50, 50, 0.75);
--moz-box-shadow:    1px 1px 30px 0px rgba(47, 50, 50, 0.75);
-box-shadow:         1px 1px 30px 0px rgba(47, 50, 50, 0.75);
-
-
-*/ }
+  left: 0px; }
   #logo img {
-    padding: 15px; }
-  #logo img {
+    padding: 15px;
     display: block;
     margin-left: auto;
     margin-right: auto; }
 
-img:hover {
-  border: 5px solid red;
-  cursor: pointer; }
-
 #bod1 {
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 90%;
   background-color: white;
-  margin-top: 25px;
   padding-top: 1px;
   min-height: 510px;
   background: white;
-  border: 15px solid black;
-  -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
-  -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
-  box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+  border: 15px double black;
+ /*   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+-moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25); */
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -53,30 +37,37 @@ img:hover {
   padding: 10px; }
 
 .tape {
-  margin-top: 20px; }
+  margin-top: 5px; }
   .tape img {
-    border: 2px solid black; }
+    border: 2px solid black;
+    margin-left: 10px;
+    margin-right: 10px; }
   .tape img:hover {
-    border: 5px solid red; }
+    border: 2px solid red; }
 
 #nav {
+  flex: 1 100%;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
-  justify-content: space-around; }
+  justify-content: center; }
   #nav div {
     padding: 10px;
     font-size: 36px;
     margin: 10px;
     max-height: 40px; }
   #nav div:hover {
-    border: 3px solid red;
+    border: 2px solid red;
     cursor: pointer; }
 
 .naver {
   border: 2px solid black; }
+
+#blog {
+  margin-top: 20px;
+  border-top: 1px dashed black; }
 
 /*# sourceMappingURL=style.css.map */
