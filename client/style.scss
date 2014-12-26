@@ -1,12 +1,15 @@
 
-
+@import url(http://fonts.googleapis.com/css?family=Abel);
 
 html {
- background:white 50% 0 repeat fixed;
+ background:url(imgs/ben1.jpg) 100% 0 repeat fixed; 
 
     width: 100% !important; 
  background-size: cover;
     -moz-background-size: cover;
+        background-position: 0px -150px; 
+
+        font-family: 'Abel', sans-serif;
 
 }
 #logo {
@@ -64,23 +67,67 @@ html {
 
 
 
+$margstyl: double;
+$margsiz: 1px;
+$margcol: transparent;
+
+
+
+@mixin shadow($alpha) {
+
+      -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, $alpha);
+-moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, $alpha);
+box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, $alpha); 
+
+}
+
     #bod1 {
+
     margin-left: auto;
     margin-right: auto;
 width: 90%;
-    background-color: white;
+
     //margin-top:10px;
      //   margin-bottom:150px;
  padding-top:1px;
-    min-height: 510px;
+    min-height: 510px; 
   //  border-radius: 10px;
-       background: white; //rgba(47, 50, 50, 0.55)
+  background:url(imgs/ben1.jpg) 50% 0 repeat fixed; 
+   width: 100% !important; 
+ background-size: cover;
+    -moz-background-size: cover;
+        background-position: 0px -150px; 
 
-         border:10px solid black; 
 
-  -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
--moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.25);
-box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25); 
+     border:$margsiz $margstyl $margcol;  
+
+ @include shadow(0.25);
+
+ /* border-top: 3px solid black;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000), to(transparent));
+  background-image: -webkit-linear-gradient(#000, transparent);
+  background-image:
+      -moz-linear-gradient(#000, transparent),
+      -moz-linear-gradient(#000, transparent);
+  background-image:
+      -o-linear-gradient(#000, transparent),
+      -o-linear-gradient(#000, transparent);
+  background-image: 
+      linear-gradient(#000, transparent),
+      linear-gradient(#000, transparent);
+  -moz-background-size: 3px 100%;
+  background-size: 3px 100%;
+  background-position: 0 0, 100% 0;
+  background-repeat: no-repeat; */
+
+
+
+
+
+
+
+
+
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -90,21 +137,134 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25);
     -webkit-flex-flow: row wrap;
   justify-content: space-around;
 
-  padding: 10px;
-
+//  padding: 10px;
 
 
 
 }
 
+$thecolor:#EDE9AC;
+
+@-webkit-keyframes colors {
+  0%   {background:transparent; }
+ 
+
+
+    25%   {background:$thecolor; }
+
+
+      50%   {background:transparent; }
+
+
+      75%   {background:$thecolor; }
+      
+          100%   {background:transparent; }
+
+}
+
+/* Standard syntax */
+@keyframes colors {
+   0%   {background:transparent; }
+ 
+
+
+    25%   {background:$thecolor; }
+
+
+      50%   {background:transparent; }
+
+
+      75%   {background:$thecolor; }
+
+          100%   {background:transparent; }
+}
+$time: 5s;
+
+.colors {
+        -webkit-animation: colors $time linear $time infinite alternate; 
+    animation: colors $time linear $time infinite alternate;
+}
+
 @media (min-width:1185px) {
    #bod1 {
-    width: 85%;
+    width: 99.5%;
    }
 
 
 }
     
+   #bod2 {
+        margin-left: auto;
+    margin-right: auto;
+padding: 5px;
+ @include shadow(0.25);
+
+
+      //  min-height: 310px; 
+          border:$margsiz $margstyl $margcol;
+   }
+
+      #bod3 {
+        margin-left: auto;
+    margin-right: auto;
+padding: 5px;
+ @include shadow(0.25);
+
+
+      //  min-height: 310px; 
+          border:$margsiz $margstyl $margcol;
+   }
+
+
+      #bod4 {
+        margin-left: auto;
+    margin-right: auto;
+padding: 5px;
+
+ @include shadow(0.25);
+
+      //  min-height: 310px; 
+          border:$margsiz $margstyl $margcol;
+   }
+
+
+      #bod5 {
+        margin-left: auto;
+    margin-right: auto;
+padding: 5px;
+ @include shadow(0.25);
+
+
+      //  min-height: 310px; 
+          border:$margsiz $margstyl $margcol;
+   }
+
+
+
+      #bod6 {
+        margin-left: auto;
+    margin-right: auto;
+padding: 5px;
+ @include shadow(0.25);
+
+
+      //  min-height: 310px; 
+          border:$margsiz $margstyl $margcol;
+   }
+
+        #bod7 {
+        margin-left: auto;
+    margin-right: auto;
+padding: 5px;
+ @include shadow(0.25);
+
+
+      //  min-height: 310px; 
+          border:$margsiz $margstyl $margcol;
+   }
+
+
+
 
 
 
@@ -116,7 +276,7 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25);
     margin-top:10px;
         margin-bottom:10px;
     img {
-     border:2px solid black;
+//     border:2px solid black;
  //    border-radius: 10px;
     margin-left: 10px;
     margin-right: 10px;
@@ -170,8 +330,10 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.55);
 
 
     div {
-        padding: 10px;
-        font-size: 36px;
+        padding-top: 7px;
+        padding-left: 10px;
+         padding-right: 10px;
+      //  font-size: 36px;
 
         margin: 10px;
             max-height: 40px;
@@ -180,12 +342,15 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.55);
 
       div:hover {
 
-   //  border:2px solid red;
+//    border:2px solid red; 
      cursor: pointer;
         -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
 -moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.55);
 box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.55); 
   //   border-radius: 10px;
+  color:white;
+  background: black;
+    border:1px solid white; 
     }
 
 
@@ -195,11 +360,19 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.55);
 
 .naver {
 
-   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.15);
+  -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.15);
 -moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.15);
 box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.15); 
 
-  border:3px solid black; 
+ 
+   font-size: 24px;  
+
+ // border:1px solid black; 
+
+}
+
+.naver:hover {
+
 
 }
 

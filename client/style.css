@@ -1,8 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Abel);
 html {
-  background: white 50% 0 repeat fixed;
+  background: url(imgs/ben1.jpg) 100% 0 repeat fixed;
   width: 100% !important;
   background-size: cover;
-  -moz-background-size: cover; }
+  -moz-background-size: cover;
+  background-position: 0px -150px;
+  font-family: 'Abel', sans-serif; }
 
 #logo {
   margin-top: 10px;
@@ -30,31 +33,129 @@ html {
   margin-left: auto;
   margin-right: auto;
   width: 90%;
-  background-color: white;
   padding-top: 1px;
   min-height: 510px;
-  background: white;
-  border: 10px solid black;
+  background: url(imgs/ben1.jpg) 50% 0 repeat fixed;
+  width: 100% !important;
+  background-size: cover;
+  -moz-background-size: cover;
+  background-position: 0px -150px;
+  border: 1px double transparent;
   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
   -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
   box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+  /* border-top: 3px solid black;
+   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000), to(transparent));
+   background-image: -webkit-linear-gradient(#000, transparent);
+   background-image:
+       -moz-linear-gradient(#000, transparent),
+       -moz-linear-gradient(#000, transparent);
+   background-image:
+       -o-linear-gradient(#000, transparent),
+       -o-linear-gradient(#000, transparent);
+   background-image: 
+       linear-gradient(#000, transparent),
+       linear-gradient(#000, transparent);
+   -moz-background-size: 3px 100%;
+   background-size: 3px 100%;
+   background-position: 0 0, 100% 0;
+   background-repeat: no-repeat; */
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
-  justify-content: space-around;
-  padding: 10px; }
+  justify-content: space-around; }
+
+@-webkit-keyframes colors {
+  0% {
+    background: transparent; }
+  25% {
+    background: #EDE9AC; }
+  50% {
+    background: transparent; }
+  75% {
+    background: #EDE9AC; }
+  100% {
+    background: transparent; } }
+/* Standard syntax */
+@keyframes colors {
+  0% {
+    background: transparent; }
+  25% {
+    background: #EDE9AC; }
+  50% {
+    background: transparent; }
+  75% {
+    background: #EDE9AC; }
+  100% {
+    background: transparent; } }
+.colors {
+  -webkit-animation: colors 5s linear 5s infinite alternate;
+  animation: colors 5s linear 5s infinite alternate; }
 
 @media (min-width: 1185px) {
   #bod1 {
-    width: 85%; } }
+    width: 99.5%; } }
+#bod2 {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+  -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+  box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+  border: 1px double transparent; }
+
+#bod3 {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+  -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+  box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+  border: 1px double transparent; }
+
+#bod4 {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+  -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+  box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+  border: 1px double transparent; }
+
+#bod5 {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+  -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+  box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+  border: 1px double transparent; }
+
+#bod6 {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+  -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+  box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+  border: 1px double transparent; }
+
+#bod7 {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+  -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+  box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+  border: 1px double transparent; }
+
 .tape {
   margin-top: 10px;
   margin-bottom: 10px; }
   .tape img {
-    border: 2px solid black;
     margin-left: 10px;
     margin-right: 10px;
     -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
@@ -76,21 +177,25 @@ html {
   -webkit-flex-flow: row wrap;
   justify-content: center; }
   #nav div {
-    padding: 10px;
-    font-size: 36px;
+    padding-top: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin: 10px;
     max-height: 40px; }
   #nav div:hover {
     cursor: pointer;
     -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
     -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
-    box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55); }
+    box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
+    color: white;
+    background: black;
+    border: 1px solid white; }
 
 .naver {
   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.15);
   -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.15);
   box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.15);
-  border: 3px solid black; }
+  font-size: 24px; }
 
 #blog {
   margin-top: 20px; }
