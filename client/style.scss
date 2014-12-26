@@ -1,5 +1,4 @@
-
-@import url(http://fonts.googleapis.com/css?family=Abel);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
 
 html {
  background:url(imgs/ben1.jpg) 100% 0 repeat fixed; 
@@ -7,14 +6,32 @@ html {
     width: 100% !important; 
  background-size: cover;
     -moz-background-size: cover;
-        background-position: 0px -150px; 
+     
+font-family: 'Roboto Condensed', sans-serif;
+}
 
-        font-family: 'Abel', sans-serif;
 
+@media (min-width:1215px) {
+html {
+       background-position: 0px -50px; 
+    }
+}
+
+@media (min-width:1415px) {
+html {
+       background-position: 0px -200px; 
+    }
+}
+
+
+
+body {
+    margin: 0px;
 }
 #logo {
 
-        margin-top: 10px;
+margin-left:-3px;
+        margin-top: -5px;
     width: 100%; 
     background-color: transparent;
 
@@ -65,11 +82,23 @@ html {
 
     } // #logo  
 
+#bodwrap {
+        margin-top: 15px;
+    margin-left: 0px;
+     margin-right: 0px;
+}
+
+@media (min-width:1185px) {
+#bodwrap {
+    margin-left: 100px;
+     margin-right: 100px;
+}
+}
 
 
 $margstyl: double;
-$margsiz: 1px;
-$margcol: transparent;
+$margsiz: 3px;
+$margcol: black;
 
 
 
@@ -85,15 +114,15 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, $alpha);
 
     margin-left: auto;
     margin-right: auto;
-width: 90%;
 
     //margin-top:10px;
      //   margin-bottom:150px;
  padding-top:1px;
+  padding-bottom:10px;
     min-height: 510px; 
   //  border-radius: 10px;
-  background:url(imgs/ben1.jpg) 50% 0 repeat fixed; 
-   width: 100% !important; 
+ // background:url(imgs/ben1.jpg) 50% 0 repeat fixed; 
+//   width: 100% !important; 
  background-size: cover;
     -moz-background-size: cover;
         background-position: 0px -150px; 
@@ -181,8 +210,8 @@ $thecolor:#EDE9AC;
 $time: 5s;
 
 .colors {
-        -webkit-animation: colors $time linear $time infinite alternate; 
-    animation: colors $time linear $time infinite alternate;
+     /* -webkit-animation: colors $time linear $time infinite alternate; 
+    animation: colors $time linear $time infinite alternate; */
 }
 
 @media (min-width:1185px) {
@@ -285,6 +314,9 @@ padding: 5px;
 -moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.25);
 box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25); 
 
+height: 350px;
+width: 250px;
+
     }
    
       img:hover {
@@ -292,9 +324,9 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25);
      //border:2px solid red;
   //   border-radius: 10px;
 
-   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
--moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.55);
-box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.55); 
+   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.75);
+-moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.75);
+box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.75); 
     }
 
 }
@@ -326,32 +358,10 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.55);
 
 
 
-   // margin-top: 10px;
+    margin-top: -20px;
+    margin-bottom: 0px;
 
 
-    div {
-        padding-top: 7px;
-        padding-left: 10px;
-         padding-right: 10px;
-      //  font-size: 36px;
-
-        margin: 10px;
-            max-height: 40px;
-
-    }
-
-      div:hover {
-
-//    border:2px solid red; 
-     cursor: pointer;
-        -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
--moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.55);
-box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.55); 
-  //   border-radius: 10px;
-  color:white;
-  background: black;
-    border:1px solid white; 
-    }
 
 
 }
@@ -360,22 +370,47 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.55);
 
 .naver {
 
+     padding-top: 9px;
+            padding-bottom: 10px;
+        padding-left: 10px;
+         padding-right: 10px;
+      //  font-size: 36px;
+
+        margin: 10px;
+            max-height: 40px;
+
+
   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.15);
 -moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.15);
 box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.15); 
 
  
-   font-size: 24px;  
+   font-size: 28px;  
 
- // border:1px solid black; 
+ border:3px double black; 
 
 }
 
 .naver:hover {
-
+//    border:2px solid red; 
+     cursor: pointer;
+        -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
+-moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.55);
+box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.55); 
+  //   border-radius: 10px;
+  color:white;
+  background: black;
+   // border:1px solid white; 
 
 }
 
+
+#blogbut {
+       margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+    text-align: center;
+}
 
 #blog {
     margin-top: 20px;

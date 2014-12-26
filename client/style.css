@@ -1,14 +1,23 @@
-@import url(http://fonts.googleapis.com/css?family=Abel);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
 html {
   background: url(imgs/ben1.jpg) 100% 0 repeat fixed;
   width: 100% !important;
   background-size: cover;
   -moz-background-size: cover;
-  background-position: 0px -150px;
-  font-family: 'Abel', sans-serif; }
+  font-family: 'Roboto Condensed', sans-serif; }
+
+@media (min-width: 1215px) {
+  html {
+    background-position: 0px -50px; } }
+@media (min-width: 1415px) {
+  html {
+    background-position: 0px -200px; } }
+body {
+  margin: 0px; }
 
 #logo {
-  margin-top: 10px;
+  margin-left: -3px;
+  margin-top: -5px;
   width: 100%;
   background-color: transparent;
   left: 0px; }
@@ -29,18 +38,25 @@ html {
     margin-left: auto;
     margin-right: auto; }
 
+#bodwrap {
+  margin-top: 15px;
+  margin-left: 0px;
+  margin-right: 0px; }
+
+@media (min-width: 1185px) {
+  #bodwrap {
+    margin-left: 100px;
+    margin-right: 100px; } }
 #bod1 {
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
   padding-top: 1px;
+  padding-bottom: 10px;
   min-height: 510px;
-  background: url(imgs/ben1.jpg) 50% 0 repeat fixed;
-  width: 100% !important;
   background-size: cover;
   -moz-background-size: cover;
   background-position: 0px -150px;
-  border: 1px double transparent;
+  border: 3px double black;
   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
   -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
   box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
@@ -92,8 +108,8 @@ html {
   100% {
     background: transparent; } }
 .colors {
-  -webkit-animation: colors 5s linear 5s infinite alternate;
-  animation: colors 5s linear 5s infinite alternate; }
+ /* -webkit-animation: colors $time linear $time infinite alternate; 
+animation: colors $time linear $time infinite alternate; */ }
 
 @media (min-width: 1185px) {
   #bod1 {
@@ -105,7 +121,7 @@ html {
   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
   -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
   box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
-  border: 1px double transparent; }
+  border: 3px double black; }
 
 #bod3 {
   margin-left: auto;
@@ -114,7 +130,7 @@ html {
   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
   -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
   box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
-  border: 1px double transparent; }
+  border: 3px double black; }
 
 #bod4 {
   margin-left: auto;
@@ -123,7 +139,7 @@ html {
   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
   -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
   box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
-  border: 1px double transparent; }
+  border: 3px double black; }
 
 #bod5 {
   margin-left: auto;
@@ -132,7 +148,7 @@ html {
   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
   -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
   box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
-  border: 1px double transparent; }
+  border: 3px double black; }
 
 #bod6 {
   margin-left: auto;
@@ -141,7 +157,7 @@ html {
   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
   -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
   box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
-  border: 1px double transparent; }
+  border: 3px double black; }
 
 #bod7 {
   margin-left: auto;
@@ -150,7 +166,7 @@ html {
   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
   -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
   box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
-  border: 1px double transparent; }
+  border: 3px double black; }
 
 .tape {
   margin-top: 10px;
@@ -160,12 +176,14 @@ html {
     margin-right: 10px;
     -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
     -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
-    box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25); }
+    box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+    height: 350px;
+    width: 250px; }
   .tape img:hover {
     cursor: pointer;
-    -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
-    -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
-    box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55); }
+    -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.75);
+    -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.75);
+    box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.75); }
 
 #nav {
   flex: 1 100%;
@@ -175,27 +193,36 @@ html {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
-  justify-content: center; }
-  #nav div {
-    padding-top: 7px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin: 10px;
-    max-height: 40px; }
-  #nav div:hover {
-    cursor: pointer;
-    -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
-    -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
-    box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
-    color: white;
-    background: black;
-    border: 1px solid white; }
+  justify-content: center;
+  margin-top: -20px;
+  margin-bottom: 0px; }
 
 .naver {
+  padding-top: 9px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px;
+  max-height: 40px;
   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.15);
   -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.15);
   box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.15);
-  font-size: 24px; }
+  font-size: 28px;
+  border: 3px double black; }
+
+.naver:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
+  -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
+  box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
+  color: white;
+  background: black; }
+
+#blogbut {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80px;
+  text-align: center; }
 
 #blog {
   margin-top: 20px; }
