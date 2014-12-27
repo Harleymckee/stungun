@@ -98,8 +98,8 @@ margin-left:-3px;
 
 $margstyl: double;
 $margsiz: 3px;
-$margcol: black;
-
+$margcol: transparent; //black
+$margsha: 0; // 0.25
 
 
 @mixin shadow($alpha) {
@@ -130,7 +130,7 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, $alpha);
 
      border:$margsiz $margstyl $margcol;  
 
- @include shadow(0.25);
+ @include shadow($margsha);
 
  /* border-top: 3px solid black;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000), to(transparent));
@@ -164,6 +164,7 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, $alpha);
   display: flex;
 
     -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
   justify-content: space-around;
 
 //  padding: 10px;
@@ -210,7 +211,7 @@ $thecolor:#EDE9AC;
 $time: 5s;
 
 .colors {
-     /* -webkit-animation: colors $time linear $time infinite alternate; 
+    /*  -webkit-animation: colors $time linear $time infinite alternate; 
     animation: colors $time linear $time infinite alternate; */
 }
 
@@ -226,7 +227,7 @@ $time: 5s;
         margin-left: auto;
     margin-right: auto;
 padding: 5px;
- @include shadow(0.25);
+ @include shadow($margsha);
 
 
       //  min-height: 310px; 
@@ -237,7 +238,7 @@ padding: 5px;
         margin-left: auto;
     margin-right: auto;
 padding: 5px;
- @include shadow(0.25);
+ @include shadow($margsha);
 
 
       //  min-height: 310px; 
@@ -250,7 +251,7 @@ padding: 5px;
     margin-right: auto;
 padding: 5px;
 
- @include shadow(0.25);
+ @include shadow($margsha);
 
       //  min-height: 310px; 
           border:$margsiz $margstyl $margcol;
@@ -261,7 +262,7 @@ padding: 5px;
         margin-left: auto;
     margin-right: auto;
 padding: 5px;
- @include shadow(0.25);
+ @include shadow($margsha);
 
 
       //  min-height: 310px; 
@@ -274,7 +275,7 @@ padding: 5px;
         margin-left: auto;
     margin-right: auto;
 padding: 5px;
- @include shadow(0.25);
+ @include shadow($margsha);
 
 
       //  min-height: 310px; 
@@ -285,7 +286,7 @@ padding: 5px;
         margin-left: auto;
     margin-right: auto;
 padding: 5px;
- @include shadow(0.25);
+ @include shadow($margsha);
 
 
       //  min-height: 310px; 
@@ -293,50 +294,6 @@ padding: 5px;
    }
 
 
-
-
-
-
-
-
-
-
-.tape {
-    margin-top:10px;
-        margin-bottom:10px;
-    img {
-//     border:2px solid black;
- //    border-radius: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-
-   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
--moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.25);
-box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25); 
-
-height: 350px;
-width: 250px;
-
-    }
-   
-      img:hover {
-           cursor: pointer;
-     //border:2px solid red;
-  //   border-radius: 10px;
-
-   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.75);
--moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.75);
-box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.75); 
-    }
-
-}
-.tape:last-child {
-  
-  //   margin-bottom:20px;
-
-
-
-}
 
 
 
@@ -354,12 +311,13 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.75);
   display: flex;
 
     -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
   justify-content: center;
 
 
 
     margin-top: -20px;
-    margin-bottom: 0px;
+    margin-bottom: -5px;
 
 
 
@@ -402,6 +360,165 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.55);
   background: black;
    // border:1px solid white; 
 
+}
+
+.active {
+
+  @extend .naver:hover;
+
+}
+
+
+#supguys {
+    margin-top:102px;
+  margin-bottom:75px;
+
+  height:197px;
+font-size:4em;
+}
+
+
+#tapes {
+    display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+  justify-content: space-around;
+  width: 100%;
+
+
+}
+
+
+.tape {
+    margin-top:10px;
+        margin-bottom:10px;
+    img {
+//     border:2px solid black;
+ //    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+-moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25); 
+
+height: 350px;
+width: 250px;
+
+    }
+   
+      img:hover {
+           cursor: pointer;
+     //border:2px solid red;
+  //   border-radius: 10px;
+
+   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.75);
+-moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.75);
+box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.75); 
+    }
+
+}
+
+
+
+
+
+#artists {
+
+     display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+  justify-content: space-around;
+  width: 100%;
+
+  margin-bottom:5px;
+
+}
+
+
+
+.artist {
+
+
+   margin-top:10px;
+      margin-bottom:-3px;
+    img.prof {
+//     border:2px solid black;
+ //    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+-moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25); 
+
+height: 281px;
+width: 250px;
+-webkit-filter: greyscale(1);
+
+    }
+   
+      img.prof:hover {
+           cursor: pointer;
+     //border:2px solid red;
+  //   border-radius: 10px;
+
+   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.75);
+-moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.75);
+box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.75); 
+    }
+
+
+}
+
+
+
+.desc {
+      text-align: center;
+       margin-top: 5px;
+      margin-bottom: 10px;
+}
+
+.btns {
+  margin-left:50px;
+}
+
+.btn {
+float:left;
+margin-left:15px;
+img { 
+height: 70px;
+width: 70px;
+}
+
+   img:hover {
+           cursor: pointer;
+     //border:2px solid red;
+  //   border-radius: 10px;
+
+   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.75);
+-moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.75);
+box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.75); 
+    }
+}
+
+
+#email {
+  margin-top:102px;
+  margin-bottom:75px;
+
+  height:197px;
+font-size:4em;
 }
 
 
