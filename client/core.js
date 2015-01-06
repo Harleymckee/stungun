@@ -15,7 +15,12 @@ var app = angular.module('stungun', []);
 		this.selectTab = function(setTab) {
 
 		$scope.tab = setTab;
-		}
+		};
+
+		this.isSelected = function(checkTab){
+		return $scope.tab === checkTab;
+
+		};
 
 
 	}]);

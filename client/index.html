@@ -46,7 +46,7 @@
 
 <body>
 <div id="logo"> <!-- wrap -->
-<img src="imgs/stungunlogotransparent.png" height="120px" width="120px">
+<img src="imgs/stungunlogotransparent.png" height="120px" width="120px" ng-click="panel.selectTab(0)">
 
 
 </div>
@@ -57,16 +57,16 @@
 
 
 
-							<div class="naver colors" ng-click="panel.selectTab(1)" ng-class="{active: tab === 1}">
+							<div class="naver colors" ng-click="panel.selectTab(1)" ng-class="{active: panel.isSelected(1)}">
 							Tapes 
 							</div>
 
-							<div class="naver colors" ng-click="panel.selectTab(2)" ng-class="{active: tab === 2}">
+							<div class="naver colors" ng-click="panel.selectTab(2)" ng-class="{active: panel.isSelected(2)}">
 							Artists
 							</div>
 
 
-							<div class="naver colors" ng-click="panel.selectTab(3)" ng-class="{active: tab === 3}">
+							<div class="naver colors" ng-click="panel.selectTab(3)" ng-class="{active: panel.isSelected(3)}">
 							E-mail 
 							</div>
 
@@ -77,12 +77,12 @@
 
 
 
-<div id="supguys" ng-show="tab === 0" style="font-size:36px;">
+<div id="supguys" ng-show="panel.isSelected(0)" style="font-size:36px;">
 Sup Guys
 </div> 
 
 
-<div id="tapes" ng-show="tab === 1"> <!-- tapes -->
+<div id="tapes" ng-show="panel.isSelected(1)"> <!-- tapes -->
 
 
 
@@ -103,7 +103,7 @@ Sup Guys
 </div> <!-- / tapes -->
 
 
-<div id="artists" ng-show="tab === 2">
+<div id="artists" ng-show="panel.isSelected(2)">
 
 
 
@@ -154,7 +154,7 @@ Sup Guys
 </div> 
 
 
-<div id="email" class="animate-show" ng-show="tab === 3">
+<div id="email" class="animate-show" ng-show="panel.isSelected(3)">
 <a href="#"> Stunguntapes@gmail.com </a>
 </div> 
 
