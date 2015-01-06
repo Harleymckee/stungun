@@ -29,7 +29,7 @@
 
 
 <div id="bodwrap" ng-controller="StunController as stun">
-<section ng-init="tab = 0">
+<section ng-controller="PanelController as panel">
 
 <div id="bod7" class="colors">
 
@@ -57,16 +57,16 @@
 
 
 
-							<div class="naver colors" ng-click="tab = 1" ng-class="{active: tab === 1}">
+							<div class="naver colors" ng-click="panel.selectTab(1)" ng-class="{active: tab === 1}">
 							Tapes 
 							</div>
 
-							<div class="naver colors" ng-click="tab = 2" ng-class="{active: tab === 2}">
+							<div class="naver colors" ng-click="panel.selectTab(2)" ng-class="{active: tab === 2}">
 							Artists
 							</div>
 
 
-							<div class="naver colors" ng-click="tab = 3" ng-class="{active: tab === 3}">
+							<div class="naver colors" ng-click="panel.selectTab(3)" ng-class="{active: tab === 3}">
 							E-mail 
 							</div>
 
@@ -154,7 +154,7 @@ Sup Guys
 </div> 
 
 
-<div id="email" ng-show="tab === 3">
+<div id="email" class="animate-show" ng-show="tab === 3">
 <a href="#"> Stunguntapes@gmail.com </a>
 </div> 
 
@@ -175,6 +175,8 @@ Sup Guys
 </div> <!-- bodwrap -->
 
 
+<div id="blogWrap" ng-controller="BlogController as blug">
+
 	<div id="blogbut" class="naver colors" ng-click="blog = !blog" ng-class="{active: blog}">
 							blog
 							</div>
@@ -184,7 +186,23 @@ Sup Guys
 
 
 
+								<div class="post">
+								<h2 align="center">blog</h2> 
+							<h4 align="center"> date </h4>
+							<p align="center">balls balls balls balls balls balls balls balls</p>
+							<div class="postend"></div>
+							</div>
+
+
+
 						
+							<div class="post">
+								<h2 align="center">blog</h2> 
+							<h4 align="center"> date </h4>
+							<p align="center">dip set</p>
+							<div class="postend"></div>
+							</div>
+
 
 
 
@@ -248,8 +266,11 @@ Sup Guys
 
 
 
+  <script src="http://code.angularjs.org/1.2.0rc1/angular.js"></script>
+  <script src="http://code.angularjs.org/1.2.0rc1/angular-animate.min.js"></script>
 
-<script type='text/javascript' src="angular.js"></script>
+
+
 <script type='text/javascript' src="core.js"></script>
 
 </body>

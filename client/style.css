@@ -83,6 +83,7 @@ body {
   display: flex;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
+  -webkit-justify-content: space-around;
   justify-content: space-around; }
 
 @-webkit-keyframes colors {
@@ -365,5 +366,37 @@ p {
   width: 25%;
   margin-left: auto;
   margin-right: auto; }
+
+.animate-show.ng-enter, .animate-show.ng-leave {
+  position: absolute; }
+
+.animate-show.ng-enter {
+  animation: slideInRight 0.5s both ease-in;
+  z-index: 8888;
+  -webkit-animation: slideInRight 0.5s both ease-in;
+  z-index: 8888; }
+
+.animate-show.ng-leave {
+  animation: slideOutLeft 0.5s both ease-in;
+  z-index: 9999;
+  -webkit-animation: slideOutLeft 0.5s both ease-in;
+  z-index: 9999; }
+
+@keyframes slideOutLeft {
+  to {
+    transform: translateX(-100%); } }
+@-webkit-keyframes slideOutLeft {
+  to {
+    transform: translateX(-100%); } }
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%); }
+  to {
+    transform: translateX(0); } }
+@-webkit-keyframes slideInRight {
+  from {
+    transform: translateX(100%); }
+  to {
+    transform: translateX(0); } }
 
 /*# sourceMappingURL=style.css.map */
