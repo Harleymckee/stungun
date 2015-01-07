@@ -383,6 +383,7 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.55);
 
 $supemail: 205px;
 #supguys {
+  display:none;
     margin-top:102px;
   margin-bottom:75px;
 
@@ -652,35 +653,7 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25);
 
 
 
-.animate-show.ng-enter, .animate-show.ng-leave{
-  position: absolute;
-}
 
-.animate-show.ng-enter { 
-  animation: slideInRight 0.5s both ease-in; z-index: 8888; 
-  -webkit-animation: slideInRight 0.5s both ease-in; z-index: 8888; 
-}
-.animate-show.ng-leave { 
-  animation: slideOutLeft 0.5s both ease-in; z-index: 9999; 
-  -webkit-animation: slideOutLeft 0.5s both ease-in; z-index: 9999; 
-}
-
-
-@keyframes slideOutLeft {
-    to      { transform: translateX(-100%); }
-}
-
-@-webkit-keyframes slideOutLeft {
-    to      { transform: translateX(-100%); }
-}
-
-
-@keyframes slideInRight {
-    from    { transform: translateX(100%); }
-    to      { transform: translateX(0); }
-}
-
-@-webkit-keyframes slideInRight {
-    from    { transform: translateX(100%); }
-    to      { transform: translateX(0); }
+.ng-hide {
+  display:none!important;
 }

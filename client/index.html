@@ -24,6 +24,10 @@
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
+
+  <script src="angular.js"></script>
+  <script src="https://code.angularjs.org/1.2.0rc1/angular-animate.min.js"></script>
+
 </head>
 
 
@@ -106,13 +110,13 @@ Sup Guys
 </div> <!-- / tapes -->
 
 
-<div id="artists" ng-show="panel.isSelected(2)">
+<div id="artists"  >
 
 
 
-				<div class="artist">
-				<img class="prof" src="imgs/alexnelmo.png">
-					<div class="desc">{{stun.stunner.artist}}
+				<div class="artist" ng-repeat="stunah in stun.stunner" ng-show="panel.isSelected(2)" ng-animate="animate">
+				<img class="prof" ng-src="{{stunah.profpic}}">
+					<div class="desc">{{stunah.artist}}
 					</div>
 					<div class="btns">
 
@@ -130,6 +134,8 @@ Sup Guys
 					</div>
 				</div>
 
+
+<!--
 				<div class="artist">
 				<img class="prof" src="imgs/grottopic.jpg">
 					<div class="desc">Grotto Girl
@@ -157,6 +163,8 @@ Sup Guys
 								</div>
 				</div>
 				</div>
+
+				-->
 
 
 </div> 
@@ -274,10 +282,8 @@ Sup Guys
 
 
 
-  <script src="angular.js"></script>
-  <script src="https://code.angularjs.org/1.2.0rc1/angular-animate.min.js"></script>
 
-
+<script type='text/javascript' src="https://code.jquery.com/jquery-2.1.3.js"></script>
 
 <script type='text/javascript' src="core.js"></script>
 
