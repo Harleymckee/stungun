@@ -295,20 +295,21 @@ body {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-flow: column wrap;
-  flex-flow: column wrap;
-  justify-content: space-around;
-  -webkit-justify-content: space-around;
-  margin-top: 40px;
+  -webkit-flex-flow: column;
+  flex-flow: column;
+  margin-top: 30px;
   padding-bottom: 62px;
-  margin-bottom: 75px;
+  margin-bottom: 85px;
   height: 205px;
   font-size: 36px; }
   #email img {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    float: center; }
+    float: center;
+    padding-bottom: 5px; }
+  #email p {
+    margin-top: 5px; }
 
 #blogbut {
   margin-left: auto;
