@@ -35,7 +35,7 @@ body {
 #logo {
 
 margin-left:-3px;
-        margin-top: -5px;
+        margin-top: -19px;
     width: 100%; 
     background-color: transparent;
 
@@ -57,6 +57,7 @@ margin-left:-3px;
     
     cursor: pointer;
 
+
     }
 
 
@@ -74,15 +75,20 @@ margin-left:-3px;
 
 
     img {     // stungun logo 
-        padding: 15px;
+        padding-bottom: 15px;
 
     display: block;
     margin-left: auto;
-    margin-right: auto 
+    margin-right: auto ;
+    //border-radius: 10px;
     
 
     }
-
+  
+    img:hover {
+      -webkit-filter:invert(100%);
+      filter:invert(100%);
+    }
 
     } // #logo  
 
@@ -351,7 +357,7 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.15);
  
    font-size: 28px;  
 
- border:3px double black; 
+ border:3px solid black; 
 
 }
 
@@ -375,11 +381,12 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.55);
 }
 
 
+$supemail: 205px;
 #supguys {
     margin-top:102px;
   margin-bottom:75px;
 
-  height:197px;
+  height:$supemail;
 font-size:4em;
 }
 
@@ -403,7 +410,7 @@ font-size:4em;
 
 
 .tape {
-    margin-top:10px;
+    margin-top:20px;
         margin-bottom:10px;
     img {
 //     border:2px solid black;
@@ -415,8 +422,8 @@ font-size:4em;
 -moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.25);
 box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25); 
 
-height: 350px;
-width: 250px;
+height: 338px;
+width: 260px;
 
     }
    
@@ -471,7 +478,7 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.75);
 -moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.25);
 box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25); 
 
-height: 281px;
+height: 251px;
 width: 250px;
 -webkit-filter: greyscale(1);
 
@@ -521,12 +528,11 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.75);
     }
 }
 
-
 #email {
   margin-top:102px;
   margin-bottom:75px;
 
-  height:197px;
+  height:$supemail;
 font-size:4em;
 }
 

@@ -1,18 +1,21 @@
-var app = angular.module('stungun', []);
+var app = angular.module('stungun', ['ngAnimate']);
 
 
 	app.controller('StunController', ['$scope', function($scope) {	
 
 
-		/*var stunnerz = {"artist" : "New Holland",
-						"" : "",
+
+		var stunnerz = {"artist" : "New Holland",
+						"profpic" : "imgs/alexnelmo.png",
 						"" : "",
 						"tape" : { "name" : "New Holland",
-									"storeurl" : "",
-									"bcurl" : ""
+									"imgurl" : "imgs/newhollandtapeart.jpg" //,
+								//	"storeurl" : "",
+								//	"bcurl" : "" 
+											}
 
-							}; */
-		//$scope.stun = stunnerz;
+							}; 
+		this.stunner = stunnerz;
 
 
 
@@ -20,6 +23,7 @@ var app = angular.module('stungun', []);
 	}]);
 
 	app.controller('PanelController', ['$scope', function($scope) {	
+	
 
 		$scope.tab = 0;
 

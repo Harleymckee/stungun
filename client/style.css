@@ -9,7 +9,7 @@ body {
 
 #logo {
   margin-left: -3px;
-  margin-top: -5px;
+  margin-top: -19px;
   width: 100%;
   background-color: transparent;
   left: 0px; }
@@ -27,10 +27,13 @@ body {
   background-color: transparent;
   left: 0px; }
   #logo2 img {
-    padding: 15px;
+    padding-bottom: 15px;
     display: block;
     margin-left: auto;
     margin-right: auto; }
+  #logo2 img:hover {
+    -webkit-filter: invert(100%);
+    filter: invert(100%); }
 
 #bodwrap {
   margin-top: 15px;
@@ -189,7 +192,7 @@ body {
   -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.15);
   box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.15);
   font-size: 28px;
-  border: 3px double black; }
+  border: 3px solid black; }
 
 .naver:hover, .active {
   cursor: pointer;
@@ -202,7 +205,7 @@ body {
 #supguys {
   margin-top: 102px;
   margin-bottom: 75px;
-  height: 197px;
+  height: 205px;
   font-size: 4em; }
 
 #tapes {
@@ -218,7 +221,7 @@ body {
   width: 100%; }
 
 .tape {
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px; }
   .tape img {
     margin-left: 10px;
@@ -226,8 +229,8 @@ body {
     -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
     -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
     box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
-    height: 350px;
-    width: 250px; }
+    height: 338px;
+    width: 260px; }
   .tape img:hover {
     cursor: pointer;
     -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.75);
@@ -256,7 +259,7 @@ body {
     -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
     -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
     box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
-    height: 281px;
+    height: 251px;
     width: 250px;
     -webkit-filter: greyscale(1); }
   .artist img.prof:hover {
@@ -288,7 +291,7 @@ body {
 #email {
   margin-top: 102px;
   margin-bottom: 75px;
-  height: 197px;
+  height: 205px;
   font-size: 4em; }
 
 #blogbut {
