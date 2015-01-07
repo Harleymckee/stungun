@@ -67,8 +67,6 @@ for (var i = 0; i < tapeArray.length; i++) {
 
 	}
 
-
-
 	this.tapes = totalTapes;
 
 
@@ -106,4 +104,26 @@ console.log(ts);
 
 
 	}]);
+
+
+	app.directive('theStuff', function() {
+		return {
+
+			restrict: 'E',
+			templateUrl: 'the-stuff.html',
+			controller: 'StunController',
+			controllerAs: 'stun'
+
+		};
+	});
+
+		app.directive('theBlog', function() {
+		return {
+
+			restrict: 'E',
+			templateUrl: 'the-blog.html'
+
+		};
+	});
+
 

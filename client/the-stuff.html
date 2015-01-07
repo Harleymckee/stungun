@@ -1,0 +1,102 @@
+
+
+
+<div id="bodwrap">
+<section ng-controller="PanelController as panel">
+
+
+
+<body>
+<div id="logo"> <!-- wrap -->
+<img src="imgs/stungunlogotransparent.png" height="120px" width="120px" ng-click="panel.selectTab(0)">
+
+
+</div>
+
+
+
+			<div id="nav">
+
+
+
+							<div class="naver colors" ng-click="panel.selectTab(1)" ng-class="{active: panel.isSelected(1)}">
+							Tapes 
+							</div>
+
+							<div class="naver colors" ng-click="panel.selectTab(2)" ng-class="{active: panel.isSelected(2)}">
+							Artists
+							</div>
+
+
+							<div class="naver colors" ng-click="panel.selectTab(3)" ng-class="{active: panel.isSelected(3)}">
+							E-mail 
+							</div>
+
+
+				</div>
+
+
+
+
+
+<div id="supguys" ng-show="panel.isSelected(0)" style="font-size:36px;">
+<p align="center">
+Sup Guys
+</p>
+</div> 
+
+
+<div id="tapes" ng-show="panel.isSelected(1)"> <!-- tapes -->
+
+
+
+<div class="tape" ng-repeat="tape in stun.tapes" >
+<a ng-href="{{tape.storeurl}}">
+<img src="{{tape.imgurl}}">
+</a>
+</div>
+
+
+
+</div> <!-- / tapes -->
+
+
+<div id="artists"  ng-show="panel.isSelected(2)">
+
+
+
+				<div class="artist" ng-repeat="stunah in stun.stunner" >
+				<img class="prof" ng-src="{{stunah.profpic}}">
+					<div class="desc">{{stunah.artist}}
+					</div>
+					<div class="btns">
+
+							<div class="btn">
+								<a ng-href="{{stunah.bndcmp}}">
+									<img src="http://static.wixstatic.com/media/52c4de_8b736db0cb604d428140fe7691a8c1a7.jpg">
+									</a>
+										</div>
+
+								<div class="btn">
+										<a ng-href="{{stunah.fbook}}">
+								<img src="imgs/facebook.svg">  
+								</a>  
+								</div>
+					</div>
+				</div>
+
+
+</div> 
+
+
+<div id="email" class="animate-show" ng-show="panel.isSelected(3)">
+<p align="center">
+<a href="#"> Stunguntapes@gmail.com </a>
+</p>
+</div> 
+
+					
+
+</section>
+</div> <!-- bodwrap -->
+
