@@ -93,28 +93,28 @@ Sup Guys
 
 
 
-<div class="tape">
-<img src="imgs/newhollandtapeart.jpg">
+<div class="tape" ng-repeat="tape in stun.tapes" >
+<img src="{{tape.imgurl}}">
 </div>
 
-<div class="tape">
+<!-- <div class="tape">
 <img src="imgs/grotto.jpg">
 </div>
 
 <div class="tape">
 <img src="imgs/sprawl.jpg">
-</div>
+</div>-->
 
 
 
 </div> <!-- / tapes -->
 
 
-<div id="artists"  >
+<div id="artists"  ng-show="panel.isSelected(2)">
 
 
 
-				<div class="artist" ng-repeat="stunah in stun.stunner" ng-show="panel.isSelected(2)" ng-animate="animate">
+				<div class="artist" ng-repeat="stunah in stun.stunner" >
 				<img class="prof" ng-src="{{stunah.profpic}}">
 					<div class="desc">{{stunah.artist}}
 					</div>
@@ -133,38 +133,6 @@ Sup Guys
 								</div>
 					</div>
 				</div>
-
-
-<!--
-				<div class="artist">
-				<img class="prof" src="imgs/grottopic.jpg">
-					<div class="desc">Grotto Girl
-					</div>
-					<div class="btns">
-							<div class="btn">
-									<img src="http://static.wixstatic.com/media/52c4de_8b736db0cb604d428140fe7691a8c1a7.jpg">
-										</div>
-										<div class="btn">
-								<img src="imgs/facebook.svg">  
-								</div>
-					</div>
-				</div>
-
-				<div class="artist">
-				<img class="prof" src="imgs/sprawlband.jpg">
-				<div class="desc">Sprawling
-				</div>
-				<div class="btns">
-							<div class="btn">
-									<img src="http://static.wixstatic.com/media/52c4de_8b736db0cb604d428140fe7691a8c1a7.jpg">
-										</div>
-										<div class="btn">
-								<img src="imgs/facebook.svg">  
-								</div>
-				</div>
-				</div>
-
-				-->
 
 
 </div> 

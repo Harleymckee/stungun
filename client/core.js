@@ -5,7 +5,9 @@ var app = angular.module('stungun', ['ngAnimate']);
 
 
 
-		var stunnerz = [{"artist" : "New Holland",
+		var stunnerz = [
+
+						{"artist" : "New Holland",
 						"profpic" : "imgs/alexnelmo.png",
 						"bndcmp" : "#",
 						"fbook" : "#",
@@ -20,55 +22,40 @@ var app = angular.module('stungun', ['ngAnimate']);
 							},
 
 
-							{"artist" : "New Holland",
-						"profpic" : "imgs/alexnelmo.png",
+						{"artist" : "Grotto Girl",
+						"profpic" : "imgs/grottopic.jpg",
 						"bndcmp" : "#",
 						"fbook" : "#",
 						"sndcld" : "#",
-						"tapes" : [{ "name" : "New Poop",
-									"imgurl" : "imgs/newhollandtapeart.jpg" ,
-									"storeurl" : "#" ,
-									"digitalurl" : "#" ,
-									"storeurl" : "#" 
-											}, 
-									{ "name" : "New shit",
-									"imgurl" : "imgs/newhollandtapeart.jpg" ,
-									"storeurl" : "#" ,
-									"digitalurl" : "#" ,
-									"storeurl" : "#" 
-											} 
+						"tapes" : []
+							},
 
-											]
 
-							}];
+
+						{"artist" : "Sprawling",
+						"profpic" : "imgs/sprawlband.jpg",
+						"bndcmp" : "#",
+						"fbook" : "#",
+						"sndcld" : "#",
+						"tapes" : []
+							}
+
+							];
 
 
 		this.stunner = stunnerz;
 
 
-var tapeArray = []
+			var tapeArray = []
 
-		for (var i = 0; i < stunnerz.length; i++) {
+			for (var i = 0; i < stunnerz.length; i++) {
 
-			var tapes = stunnerz[i].tapes; 
+						var tapes = stunnerz[i].tapes; 
 
-	tapeArray.push(tapes);
-
-			/*for (var i = 0; i < tapes.length; i++) {
-
-						tape = tapes[i];
-						tapeArray.push(tape);
-
-
-				}*/
-			
-			
-
-
-	
-			
-    	
-}
+				tapeArray.push(tapes);
+						
+			    	
+			}
 
 
 var totalTapes = [];
@@ -81,7 +68,9 @@ for (var i = 0; i < tapeArray.length; i++) {
 
 	}
 
-	console.log(totalTapes);
+
+
+	this.tapes = totalTapes;
 
 
 	}]);
