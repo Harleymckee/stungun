@@ -371,4 +371,11 @@ p {
 .ng-hide {
   display: none !important; }
 
+textarea {
+  width: 400px;
+  height: 200px; }
+
+.blogsub {
+  margin-top: -35px; }
+
 /*# sourceMappingURL=style.css.map */

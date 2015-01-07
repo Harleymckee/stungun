@@ -27,7 +27,19 @@ var app = angular.module('stungun', ['ngAnimate']);
 						"bndcmp" : "#",
 						"fbook" : "#",
 						"sndcld" : "#",
-						"tapes" : []
+						"tapes" : [{ "name" : "New Holland",
+									"imgurl" : "imgs/newhollandtapeart.jpg" ,
+									"storeurl" : "#" ,
+									"digitalurl" : "#" ,
+									"storeurl" : "#" 
+											},
+											{ "name" : "New Holland",
+									"imgurl" : "imgs/newhollandtapeart.jpg" ,
+									"storeurl" : "#" ,
+									"digitalurl" : "#" ,
+									"storeurl" : "#" 
+											}
+											]
 							},
 
 
@@ -73,6 +85,9 @@ for (var i = 0; i < tapeArray.length; i++) {
 	this.tapes = totalTapes;
 
 
+
+
+
 	}]);
 
 	app.controller('PanelController', ['$scope', function($scope) {	
@@ -96,6 +111,10 @@ for (var i = 0; i < tapeArray.length; i++) {
 
 	app.controller('BlogController', ['$scope', function($scope) {	
 
+
+var ts = Math.round((new Date()).getTime());
+
+console.log(ts);
 
 
 

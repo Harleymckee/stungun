@@ -1,0 +1,299 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html ng-app="stungun">
+<!--<![endif]-->
+
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stungun</title>
+
+
+<link rel="shortcut icon" href="imgs/stungunlogo4.png" />
+
+
+<!-- css -->
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+  <script src="angular.js"></script>
+  <script src="https://code.angularjs.org/1.2.0rc1/angular-animate.min.js"></script>
+
+</head>
+
+
+
+<div id="bodwrap" ng-controller="StunController as stun">
+<section ng-controller="PanelController as panel">
+
+<!--
+<div id="bod7" class="colors">
+
+<div id="bod6" class="colors">
+<div id="bod5" class="colors">
+<div id="bod4" class="colors">
+
+<div id="bod3" class="colors">
+<div id="bod2" class="colors">
+
+<div id="bod1">
+--> 
+
+
+<body>
+<div id="logo"> <!-- wrap -->
+<img src="imgs/stungunlogotransparent.png" height="120px" width="120px" ng-click="panel.selectTab(0)">
+
+
+<h1 align="center" style ="margin:25px ;margin-top:-15px ;">
+Admin Mode
+</h1>
+
+</div>
+
+
+
+			<div id="nav">
+
+
+
+							<div class="naver colors" ng-click="panel.selectTab(1)" ng-class="{active: panel.isSelected(1)}">
+							Tapes 
+							</div>
+
+							<div class="naver colors" ng-click="panel.selectTab(2)" ng-class="{active: panel.isSelected(2)}">
+							Artists
+							</div>
+
+
+							<div class="naver colors" ng-click="panel.selectTab(3)" ng-class="{active: panel.isSelected(3)}">
+							E-mail 
+							</div>
+
+
+				</div>
+
+
+
+
+
+<div id="supguys" ng-show="panel.isSelected(0)" style="font-size:36px;">
+<p align="center">
+Sup Guys
+</p>
+</div> 
+
+
+<div id="tapes" ng-show="panel.isSelected(1)"> <!-- tapes -->
+
+
+
+<div class="tape" ng-repeat="tape in stun.tapes" >
+<img src="{{tape.imgurl}}">
+</div>
+
+<!-- <div class="tape">
+<img src="imgs/grotto.jpg">
+</div>
+
+<div class="tape">
+<img src="imgs/sprawl.jpg">
+</div>-->
+
+<div style="margin-top:10px;">
+add tape 
+</div>
+
+</div> <!-- / tapes -->
+
+
+<div id="artists"  ng-show="panel.isSelected(2)">
+
+
+
+				<div class="artist" ng-repeat="stunah in stun.stunner" >
+				<img class="prof" ng-src="{{stunah.profpic}}">
+					<div class="desc">{{stunah.artist}}
+					</div>
+					<div class="btns">
+
+								<div class="btn">
+								<a href="#">
+									<img src="http://static.wixstatic.com/media/52c4de_8b736db0cb604d428140fe7691a8c1a7.jpg">
+									</a>
+										</div>
+
+								<div class="btn">
+										<a href="#">
+								<img src="imgs/facebook.svg">  
+								</a>
+								</div>
+					</div>
+				</div>
+
+<div style="margin-top:10px;">
+add artist
+</div>
+
+
+</div> 
+
+
+<div id="email" class="animate-show" ng-show="panel.isSelected(3)">
+<p align="center">
+<a href="#"> Stunguntapes@gmail.com </a>
+</p>
+</div> 
+
+
+				
+<!--
+</div> 
+</div>  
+</div>  
+</div>  
+</div>  
+</div>  
+</div>   -->						
+
+</section>
+</div> <!-- bodwrap -->
+
+
+
+<div id="blogWrap" ng-controller="BlogController as blug">
+
+	<div id="blogbut" class="naver colors" ng-click="blog = !blog" ng-class="{active: blog}">
+							blog
+							</div>
+
+						<div id="blog" ng-show="blog">
+
+					
+
+
+
+<div class="post" >
+<h2 align="center">
+Blog it up
+
+
+</h2>
+
+</div>
+
+
+
+<div class="post" >
+<h2 align="center">
+
+<textarea></textarea>
+<div id="blogsub">
+<input type="submit"></input>
+</div>
+
+
+</h2>
+
+</div>
+
+
+
+
+
+								<div class="post">
+								<h2 align="center">blog</h2> 
+							<h4 align="center"> date </h4>
+							<p align="center">balls balls balls balls balls balls balls balls</p>
+							<div class="postend"></div>
+							</div>
+
+
+
+						
+							<div class="post">
+								<h2 align="center">blog</h2> 
+							<h4 align="center"> date </h4>
+							<p align="center">dip set</p>
+							<div class="postend"></div>
+							</div>
+
+
+
+
+							<div class="post">
+							<h2 align="center">blog</h2> 
+							<h4 align="center"> date </h4>
+							<p align="center">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.
+							<br> 
+							</p>
+							<div class="blogimg">
+							<img src="https://38.media.tumblr.com/217051dee0d54950902d6fcca21b2cd4/tumblr_nhru0pyl2n1rj6lpxo2_r1_1280.png">
+							</div>
+							<p align="center">
+							To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?
+							</p>
+							<div class="postend"></div>
+							</div>
+							
+							<div class="post">
+								<h2 align="center">blog</h2> 
+							<h4 align="center"> date </h4>
+							<p align="center">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure? </p>
+							<p align="center">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally 
+
+							</p>
+							<div class="blogimg">
+							<img src="https://38.media.tumblr.com/7ecccb335d1bfae7c6ef446f5c1ec43e/tumblr_ng9t8kZ8y91s8diwoo2_r1_500.gif">
+							</div>
+							<p align="center">
+
+							encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure? </p>
+							<div class="postend"></div>
+							</div>
+
+		
+							<div class="post">
+								<h2 align="center">blog</h2> 
+							<h4 align="center"> date </h4>
+							<p align="center">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure? </p>
+							<p align="center">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure? </p>
+							<div class="postend"></div>
+							</div>
+
+
+							<div class="post">
+								<h2 align="center">blog</h2> 
+							<h4 align="center"> date </h4>
+							<p align="center">We dont give a damn we dont give a fuck hey</p>
+							<div class="postend"></div>
+							</div>
+
+						</div>
+
+
+
+<div id="logo2"> <!-- wrap -->
+<img src="imgs/Balfegun.gif" height="50px" width="50px">
+
+
+</div>
+
+
+
+
+<script type='text/javascript' src="https://code.jquery.com/jquery-2.1.3.js"></script>
+
+<script type='text/javascript' src="core.js"></script>
+
+</body>
+</html>

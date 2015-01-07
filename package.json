@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/Harleymckee/stungun",
   "dependencies": {
-    "express": "^4.10.6"
+    "ejs": "^2.0.8",
+    "express": "^4.10.6",
+    "jade": "^1.8.2"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -29,5 +31,5 @@
     "grunt-contrib-watch": "~0.6.1",
     "grunt-nodemon": "~0.3.0",
     "grunt-concurrent": "~0.5.0"
-     }
+  }
 }
