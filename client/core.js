@@ -4,6 +4,17 @@ var app = angular.module('stungun', []);
 	app.controller('StunController', ['$scope', function($scope) {	
 
 
+		/*var stunnerz = {"artist" : "New Holland",
+						"" : "",
+						"" : "",
+						"tape" : { "name" : "New Holland",
+									"storeurl" : "",
+									"bcurl" : ""
+
+							}; */
+		//$scope.stun = stunnerz;
+
+
 
 
 	}]);

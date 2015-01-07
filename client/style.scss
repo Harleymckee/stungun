@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
+//@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
 
 html {
  background:url(imgs/ben1.jpg) 50% 0 repeat fixed; 
@@ -55,7 +55,7 @@ margin-left:-3px;
 
     img:hover {     // stungun logo 
     
-    
+    cursor: pointer;
 
     }
 
@@ -318,6 +318,7 @@ padding: 5px;
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
   justify-content: center;
+  -webkit-justify-content: center;
 
 
 
@@ -393,6 +394,8 @@ font-size:4em;
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
   justify-content: space-around;
+  -webkit-justify-content: space-around;
+
   width: 100%;
 
 
@@ -444,6 +447,7 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.75);
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
   justify-content: space-around;
+  -webkit-justify-content: space-around;
   width: 100%;
 
   margin-bottom:5px;
