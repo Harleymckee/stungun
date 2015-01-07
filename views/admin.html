@@ -98,7 +98,9 @@ Sup Guys
 
 
 <div class="tape" ng-repeat="tape in stun.tapes" >
+<a ng-href="{{tape.storeurl}}">
 <img src="{{tape.imgurl}}">
+</a>
 </div>
 
 <!-- <div class="tape">
@@ -127,13 +129,13 @@ add tape
 					<div class="btns">
 
 								<div class="btn">
-								<a href="#">
+								<a ng-href="{{stunah.bndcmp}}">
 									<img src="http://static.wixstatic.com/media/52c4de_8b736db0cb604d428140fe7691a8c1a7.jpg">
 									</a>
 										</div>
 
 								<div class="btn">
-										<a href="#">
+										<a ng-href="{{stunah.fbook}}">
 								<img src="imgs/facebook.svg">  
 								</a>
 								</div>
@@ -173,7 +175,7 @@ add artist
 <div id="blogWrap" ng-controller="BlogController as blug">
 
 	<div id="blogbut" class="naver colors" ng-click="blog = !blog" ng-class="{active: blog}">
-							blog
+							Blog
 							</div>
 
 						<div id="blog" ng-show="blog">
@@ -184,7 +186,7 @@ add artist
 
 <div class="post" >
 <h2 align="center">
-Blog it up
+Blog Zone
 
 
 </h2>
@@ -196,9 +198,12 @@ Blog it up
 <div class="post" >
 <h2 align="center">
 
-<textarea></textarea>
+
+<textarea class="header"></textarea>
+
+<textarea class="body"></textarea>
 <div id="blogsub">
-<input type="submit"></input>
+<input class="submit" type="submit"></input>
 </div>
 
 

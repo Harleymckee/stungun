@@ -222,8 +222,8 @@ body {
   width: 100%; }
 
 .tape {
-  margin-top: 20px;
-  margin-bottom: 10px; }
+  margin-top: 19px;
+  margin-bottom: 11px; }
   .tape img {
     margin-left: 10px;
     margin-right: 10px;
@@ -371,9 +371,37 @@ p {
 .ng-hide {
   display: none !important; }
 
-textarea {
+textarea.header {
+  float: center;
+  height: 45px;
+  width: 350px;
+  max-width: 450px;
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Roboto Condensed', sans-serif;
+  background: transparent;
+  border: 3px solid black; }
+
+textarea.body {
   width: 400px;
-  height: 200px; }
+  max-width: 400px;
+  height: 200px;
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Roboto Condensed', sans-serif;
+  background: transparent;
+  border: 3px solid black; }
+
+input.submit {
+  font-size: 24px;
+  background: transparent;
+  border: 3px solid black;
+  cursor: pointer;
+  color: black; }
+
+.submit:hover {
+  color: white;
+  background: black; }
 
 .blogsub {
   margin-top: -35px; }

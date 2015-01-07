@@ -32,6 +32,19 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div id="bodwrap" ng-controller="StunController as stun">
 <section ng-controller="PanelController as panel">
 
@@ -94,7 +107,9 @@ Sup Guys
 
 
 <div class="tape" ng-repeat="tape in stun.tapes" >
+<a ng-href="{{tape.storeurl}}">
 <img src="{{tape.imgurl}}">
+</a>
 </div>
 
 <!-- <div class="tape">
@@ -120,16 +135,16 @@ Sup Guys
 					</div>
 					<div class="btns">
 
-								<div class="btn">
-								<a href="#">
+							<div class="btn">
+								<a ng-href="{{stunah.bndcmp}}">
 									<img src="http://static.wixstatic.com/media/52c4de_8b736db0cb604d428140fe7691a8c1a7.jpg">
 									</a>
 										</div>
 
 								<div class="btn">
-										<a href="#">
+										<a ng-href="{{stunah.fbook}}">
 								<img src="imgs/facebook.svg">  
-								</a>
+								</a>  
 								</div>
 					</div>
 				</div>
@@ -159,10 +174,27 @@ Sup Guys
 </div> <!-- bodwrap -->
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div id="blogWrap" ng-controller="BlogController as blug">
 
 	<div id="blogbut" class="naver colors" ng-click="blog = !blog" ng-class="{active: blog}">
-							blog
+							Blog
 							</div>
 
 
@@ -247,6 +279,28 @@ Sup Guys
 
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

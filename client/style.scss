@@ -411,8 +411,8 @@ font-size:4em;
 
 
 .tape {
-    margin-top:20px;
-        margin-bottom:10px;
+    margin-top:19px;
+        margin-bottom:11px;
     img {
 //     border:2px solid black;
  //    border-radius: 10px;
@@ -658,10 +658,50 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25);
   display:none!important;
 }
 
-textarea {
-   width:400px; 
-   height:200px;
+textarea.header {
+   float: center;
+     height:45px;
+   width:350px; 
+    max-width:450px;
+   text-align: center;
+   font-size: 24px;
+
+font-family: 'Roboto Condensed', sans-serif;
+background: transparent;
+border:3px solid black;
+
 }
+
+textarea.body {
+  width:400px; 
+   max-width:400px; 
+   height:200px; 
+   text-align: center;
+     font-size: 16px;
+
+font-family: 'Roboto Condensed', sans-serif;
+background: transparent;
+border:3px solid black;
+}
+
+
+input.submit {
+
+font-size: 24px;
+  background: transparent;
+border:3px solid black;
+cursor:pointer;
+ color: black; 
+
+
+
+}
+
+.submit:hover{
+  color: white; 
+   background: black;
+ }
+
 
 .blogsub {
   margin-top: -35px;

@@ -9,14 +9,13 @@ var app = angular.module('stungun', ['ngAnimate']);
 
 						{"artist" : "New Holland",
 						"profpic" : "imgs/alexnelmo.png",
-						"bndcmp" : "#",
-						"fbook" : "#",
+						"bndcmp" : "https://newholland.bandcamp.com/music",
+						"fbook" : "https://www.facebook.com/newhollandmusic",
 						"sndcld" : "#",
 						"tapes" : [{ "name" : "New Holland",
 									"imgurl" : "imgs/newhollandtapeart.jpg" ,
 									"storeurl" : "#" ,
-									"digitalurl" : "#" ,
-									"storeurl" : "#" 
+									"digitalurl" : "https://newholland.bandcamp.com/album/new-holland" 
 											}]
 
 							},
@@ -27,19 +26,7 @@ var app = angular.module('stungun', ['ngAnimate']);
 						"bndcmp" : "#",
 						"fbook" : "#",
 						"sndcld" : "#",
-						"tapes" : [{ "name" : "New Holland",
-									"imgurl" : "imgs/newhollandtapeart.jpg" ,
-									"storeurl" : "#" ,
-									"digitalurl" : "#" ,
-									"storeurl" : "#" 
-											},
-											{ "name" : "New Holland",
-									"imgurl" : "imgs/newhollandtapeart.jpg" ,
-									"storeurl" : "#" ,
-									"digitalurl" : "#" ,
-									"storeurl" : "#" 
-											}
-											]
+						"tapes" : []
 							},
 
 
