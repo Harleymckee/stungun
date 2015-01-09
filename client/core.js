@@ -83,6 +83,7 @@ for (var i = 0; i < tapeArray.length; i++) {
 		this.selectTab = function(setTab) {
 
 		$scope.tab = setTab;
+
 		};
 
 		this.isSelected = function(checkTab){
@@ -104,6 +105,19 @@ console.log(ts);
 
 
 	}]);
+
+
+app.controller('BpostController', ['$scope', function($scope) {	
+
+
+var ts = Math.round((new Date());
+
+console.log(ts);
+
+
+
+	}]);
+
 
 
 	app.directive('theStuff', function() {
