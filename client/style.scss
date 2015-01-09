@@ -685,7 +685,7 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25);
 
 textarea.header {
    float: center;
-     height:45px;
+     height:30px;
    width:350px; 
     max-width:450px;
    text-align: center;
@@ -734,4 +734,12 @@ cursor:pointer;
 
 form {
   margin-bottom: 50px;
+}
+
+pre {
+
+font-family: 'Roboto Condensed', sans-serif;
+
+margin: 0px;
+
 }

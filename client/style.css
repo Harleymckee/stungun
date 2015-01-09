@@ -389,7 +389,7 @@ p {
 
 textarea.header {
   float: center;
-  height: 45px;
+  height: 30px;
   width: 350px;
   max-width: 450px;
   text-align: center;
@@ -424,5 +424,9 @@ input.submit {
 
 form {
   margin-bottom: 50px; }
+
+pre {
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0px; }
 
 /*# sourceMappingURL=style.css.map */

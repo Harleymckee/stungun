@@ -27,8 +27,7 @@
 <![endif]-->
 
 
-  <script src="angular.js"></script>
-  <script src="https://code.angularjs.org/1.2.0rc1/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
 
 </head>
 
@@ -47,39 +46,68 @@ Admin Mode
 
 
 
-<div ng-controller="BpostController as blug"> 
-<form name="blogForm">
+
+
+
+
+
+<div ng-controller="BpostController as blugCtrl"> 
+<!-- {{blugCtrl.blug | json}} -->
+
+	<div class="post" id="preview">
+								<h2 align="center">{{blugCtrl.blug.head}}</h2> 
+							<h4 align="center">{{blugCtrl.blug.date}}</h4>
+							<pre><p align="center">{{blugCtrl.blug.body1}}</p> </pre>
+
+							<div class="blogimg"> 
+								<p align="center">{{blugCtrl.blug.img1}}</p>
+								</div> 
+
+
+								<pre> <p align="center">{{blugCtrl.blug.body2}}</p> </pre>
+
+			</div>
+
+
+<form name="blogForm" ng-submit="blugCtrl.addPost()" novalidate>
 <h2 align="center">
 Blog Zone
 
 
 </h2>
 
-</div>
+
 
 
 <div class="post" >
 <h2 align="center">
 
 
-<textarea class="header" ng-model="blug.head"></textarea>
+<textarea class="header" ng-model="blugCtrl.blug.head" required></textarea>
 
-<textarea class="body" ng-model="blug.body1"></textarea>
+<textarea class="body" ng-model="blugCtrl.blug.body1" required></textarea>
 
-<h3 align="center" style="margin-top: 11px;">
-<a href="#"> + add image </a>
-<textarea class="header" ng-model="blug.img"></textarea>
-</h3>
+
+
+
+
 </h2>
 </div>
-
+<h2 align="center">
+<textarea class="header" ng-model="blugCtrl.blug.img1"></textarea>
+</h2>
 
 <div class="post" >
+
 <h2 align="center">
 
 
-<textarea class="body" ng-model="blug.body2"></textarea>
+<textarea class="body" ng-model="blugCtrl.blug.body2"></textarea>
+
+<textarea class="header" ng-model="blugCtrl.blug.img2"></textarea>
+
 <div id="blogsub">
+{{blogForm.$valid}}
 <input class="submit" type="submit"></input>
 </div>
 
@@ -87,7 +115,14 @@ Blog Zone
 </h2>
 
 </form>
+
+
+
 </div>
+
+
+
+
 
 
 
