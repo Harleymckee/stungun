@@ -121,7 +121,9 @@ console.log(ts);
 		return {
 
 			restrict: 'E',
-			templateUrl: 'the-blog.html'
+			templateUrl: 'the-blog.html',
+			controller: 'BlogController',
+			controllerAs: 'blug' 
 
 		};
 	});

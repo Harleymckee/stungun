@@ -1,21 +1,30 @@
-<div id="blogWrap" ng-controller="BlogController as blug">
+<div id="blogWrap">
 
 	<div id="blogbut" class="naver colors" ng-click="blog = !blog" ng-class="{active: blog}">
 							Blog
 							</div>
-
+ 
 
 						<div id="blog" ng-show="blog">
 
-
-
+						
 								<div class="post">
-								<h2 align="center">{{blug.title}}</h2> 
-							<h4 align="center"> {{blug.date} </h4>
-							<p align="center">{{blug.content1}}</p>
+								<h2 align="center">blug.title</h2> 
+							<h4 align="center"> blug.date </h4>
+							<p align="center">blug.content1</p>
+
+								<div class="blogimg"> <!-- show if img1 = true -->
+								<img src="#">
+								</div>
+
+							<p align="center">blug.content2</p>
+
+								<div class="blogimg"> <!-- show if img2 = true -->
+								<img src="#">
+								</div>
+
 							<div class="postend"></div>
 							</div>
-
 
 
 						
