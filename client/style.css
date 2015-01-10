@@ -337,8 +337,6 @@ h4 {
   margin-left: auto;
   margin-right: auto; }
   .blogimg img {
-    width: 80%;
-    height: 80%;
     display: block;
     margin: auto;
     margin-top: 10px;
@@ -358,14 +356,14 @@ p {
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
-    width: 50%; }
-
+    width: 50%; } }
+@media (max-width: 1000px) {
   .blogimg {
     margin-left: auto;
     margin-right: auto; }
     .blogimg img {
-      width: 65%;
-      height: 65%;
+      width: 80%;
+      height: 80%;
       display: block;
       margin: auto;
       margin-top: 10px;
@@ -428,5 +426,10 @@ form {
 pre {
   font-family: 'Roboto Condensed', sans-serif;
   margin: 0px; }
+
+.imgurl {
+  margin-top: -20px;
+  margin-bottom: 20px;
+  width: 350px; }
 
 /*# sourceMappingURL=style.css.map */

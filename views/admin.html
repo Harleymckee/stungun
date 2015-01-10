@@ -49,9 +49,19 @@ Admin Mode
 
 
 
-
-
 <div ng-controller="BpostController as blugCtrl"> 
+
+
+<form name="blogForm" ng-submit="blogForm.$valid && blugCtrl.addPost()" novalidate>
+
+
+
+
+
+
+
+
+
 <!-- {{blugCtrl.blug | json}} -->
 
 	<div class="post" id="preview">
@@ -59,17 +69,31 @@ Admin Mode
 							<h4 align="center">{{blugCtrl.blug.date}}</h4>
 							<pre><p align="center">{{blugCtrl.blug.body1}}</p> </pre>
 
-							<div class="blogimg"> 
-								<p align="center">{{blugCtrl.blug.img1}}</p>
+							<div class="blogimg" ng-show="blogForm.$valid"> 
+								<img ng-src="{{blugCtrl.blug.img1}}">
 								</div> 
 
 
 								<pre> <p align="center">{{blugCtrl.blug.body2}}</p> </pre>
 
+
+							<div class="blogimg" ng-show="blogForm.$valid">  
+								<img ng-src="{{blugCtrl.blug.img2}}">
+								</div> 
+
 			</div>
 
 
-<form name="blogForm" ng-submit="blugCtrl.addPost()" novalidate>
+
+
+
+
+
+
+
+
+
+
 <h2 align="center">
 Blog Zone
 
@@ -94,7 +118,7 @@ Blog Zone
 </h2>
 </div>
 <h2 align="center">
-<textarea class="header" ng-model="blugCtrl.blug.img1"></textarea>
+<textarea  class="imgurl" ng-model="blugCtrl.blug.img1"></textarea>
 </h2>
 
 <div class="post" >
@@ -104,10 +128,10 @@ Blog Zone
 
 <textarea class="body" ng-model="blugCtrl.blug.body2"></textarea>
 
-<textarea class="header" ng-model="blugCtrl.blug.img2"></textarea>
+<textarea  class="imgurl" ng-model="blugCtrl.blug.img2"></textarea>
 
 <div id="blogsub">
-{{blogForm.$valid}}
+<img src="https://gp4.googleusercontent.com/-qgVf780dzWA/AAAAAAAAAAI/AAAAAAAAAAA/pu0FU4GxAf4/s48-c-k-no/photo.jpg" ng-show="blogForm.$valid">
 <input class="submit" type="submit"></input>
 </div>
 

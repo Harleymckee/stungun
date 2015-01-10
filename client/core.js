@@ -121,13 +121,34 @@ app.controller('BpostController', ['$scope', function($scope) {
 	var posts =[];
 
 
+
 	
+
+
+
+
 
 	this.addPost = function(post) {
 
-		posts.push(this.blug);
+		var d = new Date();
 
-		console.log(posts);
+var month = d.getMonth()+1;
+var day = d.getDate();
+
+var dOutput = 
+    (month<10 ? '0' : '') + month + '/' +
+    (day<10 ? '0' : '') + day + '/' +
+    d.getFullYear() + '/' + 
+    d.getHours() + ':' +
+    d.getMinutes()
+
+
+
+	this.blug.date = dOutput;
+
+	posts.push(this.blug);
+
+	console.log(posts);
 
 	this.blug = {};
 	}

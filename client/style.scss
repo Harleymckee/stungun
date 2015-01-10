@@ -603,8 +603,8 @@ h4 {
          margin-left: auto;
     margin-right: auto;
     img {
-        width: 80%;
-        height: 80%;
+       // width: 80%;
+     //   height: 80%;
            display:block;
     margin:auto;
     margin-top:10px;
@@ -632,16 +632,18 @@ p {
     margin-right: auto;
      margin-top:0px;
     width:50%; 
-
 }
+}
+
+@media (max-width:1000px) {
 
 
 .blogimg{
          margin-left: auto;
     margin-right: auto;
     img {
-        width: 65%;
-        height: 65%;
+        width: 80%;
+        height: 80%;
            display:block;
     margin:auto;
     margin-top:10px;
@@ -654,6 +656,7 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25);
 }
 
 }
+
 
 
     
@@ -742,4 +745,10 @@ font-family: 'Roboto Condensed', sans-serif;
 
 margin: 0px;
 
+}
+
+.imgurl {
+  margin-top: -20px;
+  margin-bottom: 20px; 
+  width: 350px;
 }
