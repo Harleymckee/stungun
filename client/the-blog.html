@@ -7,50 +7,35 @@
 
 						<div id="blog" ng-show="blog">
 
-						
+					
 
 
-	
-							<h4 align="center">{{blug.date}}</h4>
-							<pre><p align="center">{{blug.body1}}</p> </pre>
-
-							<div class="blogimg"> 
-								<img ng-src="{{blug.img1}}">
-								</div> 
+							<div class="post" ng-repeat="bloggah in blogCtrl.blogger | backwards ">
 
 
-								<pre> <p align="center">{{blug.body2}}</p> </pre>
-
-
-							<div class="blogimg" >  
-								<img ng-src="{{blug.img2}}">
-								</div> 
-
-								<pre> <p align="center">{{blug.body3}}</p> </pre>
-
-
-							<div class="post">
-							<h2 align="center">{{blug.head}}</h2> 
-							<h4 align="center"> {{blug.date}} </h4>
+							<h2 align="center">{{bloggah.head}}</h2> 
+							<h4 align="center"> {{bloggah.date}} </h4>
 							<p align="center">
-							{{blug.body1}}
+							{{bloggah.body1}}
 							</p>
 							<div class="blogimg">
-							<img ng-src="{{blug.img1}}" ng-show="blug.img1">
+							<img ng-src="{{bloggah.img1}}" ng-show="bloggah.img1">
 							</div>
-							<p align="center" ng-show="blug.body3">
-							{{blug.body2}}
+							<p align="center" ng-show="bloggah.body2">
+							{{bloggah.body2}}
 							</p>
 							<div class="blogimg">
-							<img ng-src="{{blug.img2}}" ng-show="blug.img2">
+							<img ng-src="{{bloggah.img2}}" ng-show="bloggah.img2">
 							</div>
-							<p align="center" ng-show="blug.body3">
-							{{blug.body3}}
+							<p align="center" ng-show="bloggah.body3">
+							{{bloggah.body3}}
 							</p>
 							<div class="postend"></div>
-							</div>
-							
 
+
+
+							</div> 
+							
 
 
 

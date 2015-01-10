@@ -1,0 +1,96 @@
+<div> 
+
+
+<form name="blogForm" ng-submit="blogForm.$valid && blugCtrl.addPost()" novalidate>
+
+
+
+
+
+
+
+
+
+<!-- {{blugCtrl.blug | json}} -->
+
+	<div class="post" id="preview" ng-if="blugCtrl.blug.head || blugCtrl.blug.body1">
+	<h4 align="center"> Preview </h4>
+ 								<h2 align="center">{{blugCtrl.blug.head}}</h2> 
+							<h4 align="center">{{blugCtrl.blug.date}}</h4>
+							<p align="center">{{blugCtrl.blug.body1}}</p>
+
+							<div class="blogimg"> 
+								<img ng-if="blugCtrl.blug.img1" ng-src="{{blugCtrl.blug.img1}}"> 
+								</div> 
+
+
+								 <p align="center">{{blugCtrl.blug.body2}}</p> 
+
+
+							<div class="blogimg" >  
+								<img ng-if="blugCtrl.blug.img1" ng-src="{{blugCtrl.blug.img2}}">
+								</div> 
+
+								<p align="center">{{blugCtrl.blug.body3}}</p> 
+
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 align="center">
+Blog Zone
+
+
+</h2>
+
+
+
+
+<div class="post" >
+<h2 align="center">
+
+
+<textarea value="header" class="header" ng-model="blugCtrl.blug.head" required></textarea>
+
+<textarea class="body" ng-model="blugCtrl.blug.body1" required></textarea>
+
+
+
+
+
+
+<div class="post" >
+
+
+
+<textarea type="url"  class="header" ng-model="blugCtrl.blug.img1"></textarea>
+
+<textarea class="body" ng-model="blugCtrl.blug.body2"></textarea>
+
+<textarea type="url"  class="header" ng-model="blugCtrl.blug.img2"></textarea>
+
+<textarea class="body" ng-model="blugCtrl.blug.body3"></textarea>
+
+<div id="blogsub">
+<img src="https://gp4.googleusercontent.com/-qgVf780dzWA/AAAAAAAAAAI/AAAAAAAAAAA/pu0FU4GxAf4/s48-c-k-no/photo.jpg" ng-show="blogForm.$valid">
+<input class="submit" type="submit"></input>
+</div>
+
+
+</h2>
+</div>
+
+</form>
+
+
+
+</div>
