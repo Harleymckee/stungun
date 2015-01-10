@@ -1,4 +1,4 @@
-var app = angular.module('stungun', []);
+var app = angular.module('stungun', ['firebase']);
 
 
 	app.controller('StunController', ['$scope', function($scope) {	
@@ -98,9 +98,6 @@ for (var i = 0; i < tapeArray.length; i++) {
 	app.controller('BlogController', ['$scope', function($scope) {	
 
 
-//var ts = Math.round((new Date()).getTime());
-
-//console.log(ts);
 
 
 
@@ -109,20 +106,11 @@ for (var i = 0; i < tapeArray.length; i++) {
 
 app.controller('BpostController', ['$scope', function($scope) {	
 
-	/*var bluggers = {"head" : "sdf",
-				"date" : "sdf",
-				"body1" : "sdf",
-				"img1" : "dfs",
-				"body2" : "fsd",
-				"img2" : "fsd"
-						}; */
+	
+					
 
 	this.blug = {};
 	var posts =[];
-
-
-
-	
 
 
 
@@ -146,6 +134,9 @@ var dOutput =
 
 	this.blug.date = dOutput;
 
+
+
+
 	posts.push(this.blug);
 
 	console.log(posts);
@@ -153,10 +144,6 @@ var dOutput =
 	this.blug = {};
 	}
 
-
-//var ts = Math.round((new Date())
-
-//console.log(ts);
 
 
 

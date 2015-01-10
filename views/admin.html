@@ -65,11 +65,12 @@ Admin Mode
 <!-- {{blugCtrl.blug | json}} -->
 
 	<div class="post" id="preview">
-								<h2 align="center">{{blugCtrl.blug.head}}</h2> 
+	<h4 align="center"> Preview </h4>
+ 								<h2 align="center">{{blugCtrl.blug.head}}</h2> 
 							<h4 align="center">{{blugCtrl.blug.date}}</h4>
 							<pre><p align="center">{{blugCtrl.blug.body1}}</p> </pre>
 
-							<div class="blogimg" ng-show="blogForm.$valid"> 
+							<div class="blogimg"> 
 								<img ng-src="{{blugCtrl.blug.img1}}">
 								</div> 
 
@@ -77,9 +78,11 @@ Admin Mode
 								<pre> <p align="center">{{blugCtrl.blug.body2}}</p> </pre>
 
 
-							<div class="blogimg" ng-show="blogForm.$valid">  
+							<div class="blogimg" >  
 								<img ng-src="{{blugCtrl.blug.img2}}">
 								</div> 
+
+								<pre> <p align="center">{{blugCtrl.blug.body3}}</p> </pre>
 
 			</div>
 
@@ -107,7 +110,7 @@ Blog Zone
 <h2 align="center">
 
 
-<textarea class="header" ng-model="blugCtrl.blug.head" required></textarea>
+<textarea value="header" class="header" ng-model="blugCtrl.blug.head" required></textarea>
 
 <textarea class="body" ng-model="blugCtrl.blug.body1" required></textarea>
 
@@ -115,20 +118,18 @@ Blog Zone
 
 
 
-</h2>
-</div>
-<h2 align="center">
-<textarea  class="imgurl" ng-model="blugCtrl.blug.img1"></textarea>
-</h2>
 
 <div class="post" >
 
-<h2 align="center">
 
+
+<textarea type="url"  class="header" ng-model="blugCtrl.blug.img1"></textarea>
 
 <textarea class="body" ng-model="blugCtrl.blug.body2"></textarea>
 
-<textarea  class="imgurl" ng-model="blugCtrl.blug.img2"></textarea>
+<textarea type="url"  class="header" ng-model="blugCtrl.blug.img2"></textarea>
+
+<textarea class="body" ng-model="blugCtrl.blug.body3"></textarea>
 
 <div id="blogsub">
 <img src="https://gp4.googleusercontent.com/-qgVf780dzWA/AAAAAAAAAAI/AAAAAAAAAAA/pu0FU4GxAf4/s48-c-k-no/photo.jpg" ng-show="blogForm.$valid">
@@ -137,6 +138,7 @@ Blog Zone
 
 
 </h2>
+</div>
 
 </form>
 

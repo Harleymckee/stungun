@@ -603,7 +603,7 @@ h4 {
          margin-left: auto;
     margin-right: auto;
     img {
-       // width: 80%;
+       max-width: 80%;
      //   height: 80%;
            display:block;
     margin:auto;
@@ -747,6 +747,12 @@ margin: 0px;
 
 }
 
+
+#preview {
+
+ border:1px solid black;
+ width: 55%;
+}
 .imgurl {
   margin-top: -20px;
   margin-bottom: 20px; 
