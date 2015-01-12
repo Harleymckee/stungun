@@ -112,7 +112,7 @@ for (var i = 0; i < tapeArray.length; i++) {
 /// make a factory for firebase ref
 
 
-	app.controller('BlogController', ['$scope',  '$firebase', function($scope, $firebase) {	
+	app.controller('BlogController', ['$scope',  '$firebase', /* '$firebaseauth', */ function($scope, $firebase /*, $firebaseauth */) {	
 
 
 		/* var blog1 = {body1: "dfasdfasfasdf",
@@ -125,9 +125,11 @@ for (var i = 0; i < tapeArray.length; i++) {
 
 
 var ref = new Firebase("https://stungun.firebaseio.com/blog");
+//var auth = $firebaseAuth(ref);
   var sync = $firebase(ref);
 
 	
+	//console.log(auth);
 					
 var blogArray = sync.$asArray();
 
