@@ -1,7 +1,18 @@
 <div> 
 
 
-<form name="blogForm" ng-submit="blogForm.$valid && blugCtrl.addPost()" novalidate>
+
+
+
+
+<h2 align="center" ng-click="blug = !blug">
+Blog Zone
+
+
+</h2>
+
+
+<form name="blogForm" ng-submit="blogForm.$valid && blugCtrl.addPost()" novalidate ng-show="blug">
 
 
 
@@ -44,21 +55,7 @@
 
 
 
-
-
-
-
-
-<h2 align="center">
-Blog Zone
-
-
-</h2>
-
-
-
-
-<div class="post" >
+<div class="post">
 <h2 align="center">
 
 
