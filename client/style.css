@@ -323,11 +323,14 @@ body {
 h2 {
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 90%;
   margin-bottom: 0px;
   margin-top: 10px; }
 
 h4 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
   font-weight: 500;
   margin-bottom: 5px;
   margin-top: 0px;
@@ -340,8 +343,8 @@ h4 {
     max-width: 60%;
     display: block;
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
     -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
     box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25); }
@@ -350,13 +353,24 @@ p {
   margin-left: auto;
   margin-right: auto;
   margin-top: 0px;
-  width: 90%; }
+  width: 90%;
+  text-indent: 2em; }
 
 @media (min-width: 700px) {
   p {
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
+    width: 50%; }
+
+  h2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; }
+
+  h4 {
+    margin-left: auto;
+    margin-right: auto;
     width: 50%; } }
 @media (max-width: 1000px) {
   .blogimg {
@@ -367,8 +381,8 @@ p {
       height: 80%;
       display: block;
       margin: auto;
-      margin-top: 10px;
-      margin-bottom: 25px;
+      margin-top: 20px;
+      margin-bottom: 20px;
       -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
       -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
       box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25); } }
@@ -377,8 +391,14 @@ p {
   margin-right: auto;
   margin-top: 0px; }
 
+.postEdit {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  width: 50%; }
+
 .postend {
-  border-bottom: 1px dotted black;
+  border-bottom: 1px solid black;
   width: 25%;
   margin-left: auto;
   margin-right: auto; }
@@ -426,8 +446,12 @@ pre {
   font-family: 'Roboto Condensed', sans-serif;
   margin: 0px; }
 
-#preview {
-  width: 55%; }
+.preview {
+  word-wrap: break-word;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  text-indent: 2em; }
 
 .imgurl {
   margin-top: -20px;

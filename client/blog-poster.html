@@ -13,25 +13,28 @@
 
 <!-- {{blugCtrl.blug | json}} -->
 
-	<div class="post" id="preview" ng-if="blugCtrl.blug.head || blugCtrl.blug.body1">
-	<h4 align="center"> Preview </h4>
+	<div class="postEdit" ng-if="blugCtrl.blug.head || blugCtrl.blug.body1">
+
+							<h4 align="center"> Preview </h4>
+
+
  								<h2 align="center">{{blugCtrl.blug.head}}</h2> 
-							<h4 align="center">{{blugCtrl.blug.date}}</h4>
-							<p align="center">{{blugCtrl.blug.body1}}</p>
+						
+							<div class="preview">{{blugCtrl.blug.body1}}</div>
 
 							<div class="blogimg"> 
 								<img ng-if="blugCtrl.blug.img1" ng-src="{{blugCtrl.blug.img1}}"> 
 								</div> 
 
 
-								 <p align="center">{{blugCtrl.blug.body2}}</p> 
+								 <div class="preview">{{blugCtrl.blug.body2}}</div> 
 
 
-							<div class="blogimg" >  
+							<div class="blogimg">  
 								<img ng-if="blugCtrl.blug.img1" ng-src="{{blugCtrl.blug.img2}}">
 								</div> 
 
-								<p align="center">{{blugCtrl.blug.body3}}</p> 
+								<div class="preview" align="center">{{blugCtrl.blug.body3}}</div> 
 
 			</div>
 

@@ -141,6 +141,13 @@ this.blogger = blogArray;
 	}]);
 
 
+
+app.controller('AtpostController', ['$scope', '$firebase', function($scope, $firebase) {	
+
+
+
+	}]);
+
 app.controller('BpostController', ['$scope', '$firebase', function($scope, $firebase) {	
 
 

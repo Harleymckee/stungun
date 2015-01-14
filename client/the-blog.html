@@ -8,29 +8,37 @@
 						<div id="blog" ng-show="blog">
 
 					
-
+							<div class="postend"></div> 
 
 							<div class="post" ng-repeat="bloggah in blogCtrl.blogger | backwards ">
 
 
 							<h2 align="center">{{bloggah.head}}</h2> 
 							<h4 align="center"> {{bloggah.date}} </h4>
-							<p align="center">
+
+							<p >
+						
 							{{bloggah.body1}}
+						
 							</p>
 							<div class="blogimg">
 							<img ng-src="{{bloggah.img1}}" ng-show="bloggah.img1">
 							</div>
-							<p align="center" ng-show="bloggah.body2">
+							<p ng-show="bloggah.body2">
+							
 							{{bloggah.body2}}
+							
 							</p>
 							<div class="blogimg">
 							<img ng-src="{{bloggah.img2}}" ng-show="bloggah.img2">
 							</div>
-							<p align="center" ng-show="bloggah.body3">
+							<p ng-show="bloggah.body3">
+							
 							{{bloggah.body3}}
+							
+
 							</p>
-							<div class="postend"></div>
+						<div class="postend"></div> 
 
 
 
