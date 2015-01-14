@@ -10,8 +10,11 @@ app.filter('backwards', function() {
 
 
 app.factory('Stun', function() {
- // var ref = new Firebase("https://<your-firebase>.firebaseio.com/");
-  //return $firebaseAuth(ref);
+
+
+
+  //var ref = new Firebase("https://stungun.firebaseio.com/artists");
+  //var sync = $firebase(ref);
 
 
 		 stunnerz = [
@@ -63,43 +66,9 @@ return stunnerz;
 	app.controller('StunController', ['$scope', 'Stun', function($scope, Stun) {
 
 
-			/* var stunnerz = [
+		
 
-						{"artist" : "New Holland",
-						"profpic" : "imgs/alexnelmo.png",
-						"bndcmp" : "https://newholland.bandcamp.com/music",
-						"fbook" : "https://www.facebook.com/newhollandmusic",
-						"sndcld" : "#",
-						"tapes" : [{ "name" : "New Holland",
-									"imgurl" : "imgs/newhollandtapeart.jpg" ,
-									"storeurl" : "#" ,
-									"digitalurl" : "https://newholland.bandcamp.com/album/new-holland" 
-											}]
-
-							},
-
-
-						{"artist" : "Grotto Girl",
-						"profpic" : "imgs/grottopic.jpg",
-						"bndcmp" : "#",
-						"fbook" : "#",
-						"sndcld" : "#",
-						"tapes" : []
-							},
-
-
-
-						{"artist" : "Sprawling",
-						"profpic" : "imgs/sprawlband.jpg",
-						"bndcmp" : "#",
-						"fbook" : "#",
-						"sndcld" : "#",
-						"tapes" : []
-							}
-
-							]; */
-
-							console.log(Stun);
+					
 
 			this.stunner = Stun;
 
@@ -164,12 +133,6 @@ for (var i = 0; i < tapeArray.length; i++) {
 	app.controller('BlogController', ['$scope',  '$firebase', /* '$firebaseauth', */ function($scope, $firebase /*, $firebaseauth */) {	
 
 
-		/* var blog1 = {body1: "dfasdfasfasdf",
-		date: "01/09/2015/19:36",
-		head: "safdasdf",
-		img1: "http://www.picgifs.com/music-graphics/music-graphics/rockstar/music-graphics-rockstar-288514.jpg" 
-						}; */
-
 
 
 
@@ -191,9 +154,59 @@ this.blogger = blogArray;
 
 
 
-app.controller('AtpostController', ['$scope', '$firebase', function($scope, $firebase) {	
+app.controller('AtpostController', ['$scope', 'Stun', function($scope, Stun) {	
 
 
+			this.ape = {};
+			this.stunner = Stun;
+
+			this.addArtist = function(artist) {
+				Stun.push(this.ape);
+				this.ape = {};
+
+
+			}
+
+		this.tape = {};
+
+	//	console.log(Stun);
+
+		
+
+			this.clkArt = function(tape) {
+
+		
+
+				this.art = tape;
+
+				//console.log(this.art);
+
+			};
+
+
+
+
+		// useful 
+		/*
+
+var tapeArray = [];
+
+for (i = 0; i < Stun.length; i++){
+			var tapers = Stun[i].tapes;
+
+			if (tapers.length > 0){
+
+			for (i = 0; i < tapers.length; i++){
+				console.log(tapers[i]);
+				tapeArray.push(tapers[i]);
+
+			}
+			}
+		}
+
+		console.log(tapeArray);
+		
+	*/
 
 	}]);
 

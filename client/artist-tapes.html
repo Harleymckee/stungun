@@ -14,26 +14,32 @@ New Artist
 <div class="post" >
 
 
-<form name="artistForm">
+<div class="artist2">
+<img class="prof2" ng-if="atpostCtrl.ape.profpic" ng-src="{{atpostCtrl.ape.profpic}}">
+
+	<div class="desc">{{atpostCtrl.ape.artist}}
+					</div>
+</div>
+
+
+
+
+<form name="artistForm" ng-submit="artistForm.$valid && atpostCtrl.addArtist()" novalidate>
 
 <h3 align="center">
 
 <br> name: <textarea value="header" class="header" ng-model="atpostCtrl.ape.artist" required></textarea>
-<br> picture url: <textarea value="header" class="header" ng-model="atpostCtrl.ape.profpic" required></textarea>
-<br> bandcamp url: <textarea value="header" class="header" ng-model="atpostCtrl.ape.bndcmp" required></textarea>
-<br> facebook url: <textarea value="header" class="header" ng-model="atpostCtrl.ape.fbook" required></textarea>
-<br> soundcloud url: <textarea value="header" class="header" ng-model="atpostCtrl.ape.sndcld" required></textarea>
+<br> picture url: <textarea type="url"  value="header" class="header" ng-model="atpostCtrl.ape.profpic" required></textarea>
+<br> bandcamp url: <textarea type="url" value="header" class="header" ng-model="atpostCtrl.ape.bndcmp"></textarea>
+<br> facebook url: <textarea type="url"  value="header" class="header" ng-model="atpostCtrl.ape.fbook"></textarea>
 
-<br><input class="submit" type="submit"></input>
+<br>
+<img src="https://gp4.googleusercontent.com/-qgVf780dzWA/AAAAAAAAAAI/AAAAAAAAAAA/pu0FU4GxAf4/s48-c-k-no/photo.jpg" ng-show="artistForm.$valid">
+<input class="submit" type="submit"></input>
 
 </h3>
 
 </form>
-
-<div class="artist2">
-<img class="prof2" ng-if="atpostCtrl.ape.profpic" ng-src="{{atpostCtrl.ape.profpic}}">
-</div>
-
 
 </div>
 
@@ -46,23 +52,39 @@ New Tape
 </h2>
 <div class="post">
 
-<div class="prev2">
+<div class="prev2" ng-repeat="stunah in atpostCtrl.stunner" ng-click="atpostCtrl.clkArt(stunah)" ng-class="{active: stunah === atpostCtrl.art}">
 
-<article align="center">
-<a >fasd</a>
+	<article align="center">
+	<a >{{stunah.artist}}</a>
+	</article>
+
+
+	<div class="prev3" ng-if="stunah.tapes" ng-repeat="tape in stunah.tapes">
+	<article align="center">
+		{{tape.name}}
+		</article>
+	</div>
+
+
+
+	</div>
+
+
+<div class="prev2" style="color:red;"ng-click="atpostCtrl.art = null">
+	<article align="center">
+Reset
+
 </article>
 </div>
 
-
-<form name="tapeForm">
+<form name="tapeForm" ng-if="atpostCtrl.art" novalidate>
 
 <h3 align="center">
 
-<br> name: <textarea value="header" class="header" ng-model="atpostCtrl.ape.artist" required></textarea>
-<br> picture url: <textarea value="header" class="header" ng-model="atpostCtrl.ape.profpic" required></textarea>
-<br> bandcamp url: <textarea value="header" class="header" ng-model="atpostCtrl.ape.bndcmp" required></textarea>
-<br> facebook url: <textarea value="header" class="header" ng-model="atpostCtrl.ape.fbook" required></textarea>
-<br> soundcloud url: <textarea value="header" class="header" ng-model="atpostCtrl.ape.sndcld" required></textarea>
+<br> name: <textarea value="header" class="header" ng-model="atpostCtrl.tape.name" required></textarea>
+<br> picture url: <textarea value="header" class="header" ng-model="atpostCtrl.tape.imgurl" required></textarea>
+<br> bigcartel url: <textarea value="header" class="header" ng-model="atpostCtrl.tape.storeurl" required></textarea>
+<br> bandcamp url: <textarea value="header" class="header" ng-model="atpostCtrl.tape.digitalurl" required></textarea>
 
 <br><input class="submit" type="submit"></input>
 
