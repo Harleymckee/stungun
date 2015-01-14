@@ -9,16 +9,12 @@ app.filter('backwards', function() {
 
 
 
+app.factory('Stun', function() {
+ // var ref = new Firebase("https://<your-firebase>.firebaseio.com/");
+  //return $firebaseAuth(ref);
 
 
-
-	app.controller('StunController', ['$scope', function($scope) {	
-
-
-
-
-
-		var stunnerz = [
+		 stunnerz = [
 
 						{"artist" : "New Holland",
 						"profpic" : "imgs/alexnelmo.png",
@@ -55,7 +51,60 @@ app.filter('backwards', function() {
 							];
 
 
-		this.stunner = stunnerz;
+	
+return stunnerz;
+
+
+});
+
+
+
+
+	app.controller('StunController', ['$scope', 'Stun', function($scope, Stun) {
+
+
+			/* var stunnerz = [
+
+						{"artist" : "New Holland",
+						"profpic" : "imgs/alexnelmo.png",
+						"bndcmp" : "https://newholland.bandcamp.com/music",
+						"fbook" : "https://www.facebook.com/newhollandmusic",
+						"sndcld" : "#",
+						"tapes" : [{ "name" : "New Holland",
+									"imgurl" : "imgs/newhollandtapeart.jpg" ,
+									"storeurl" : "#" ,
+									"digitalurl" : "https://newholland.bandcamp.com/album/new-holland" 
+											}]
+
+							},
+
+
+						{"artist" : "Grotto Girl",
+						"profpic" : "imgs/grottopic.jpg",
+						"bndcmp" : "#",
+						"fbook" : "#",
+						"sndcld" : "#",
+						"tapes" : []
+							},
+
+
+
+						{"artist" : "Sprawling",
+						"profpic" : "imgs/sprawlband.jpg",
+						"bndcmp" : "#",
+						"fbook" : "#",
+						"sndcld" : "#",
+						"tapes" : []
+							}
+
+							]; */
+
+							console.log(Stun);
+
+			this.stunner = Stun;
+
+
+		this.ape = {};
 
 
 			var tapeArray = []
@@ -233,6 +282,18 @@ this.blug.img2 = "";
 
 		};
 	});
+
+		app.directive('artistTapes', function() {
+		return {
+
+			restrict: 'E',
+			templateUrl: 'artist-tapes.html',
+			controller: 'AtpostController',
+			controllerAs: 'atpostCtrl' 
+
+		};
+	});
+
 
 
 

@@ -3,11 +3,77 @@
 
 
 
-<form name="arttap">
 
+<h2 align="center">
+New Artist
+
+
+</h2>
+
+
+<div class="post" >
+
+
+<form name="artistForm">
+
+<h3 align="center">
+
+<br> name: <textarea value="header" class="header" ng-model="atpostCtrl.ape.artist" required></textarea>
+<br> picture url: <textarea value="header" class="header" ng-model="atpostCtrl.ape.profpic" required></textarea>
+<br> bandcamp url: <textarea value="header" class="header" ng-model="atpostCtrl.ape.bndcmp" required></textarea>
+<br> facebook url: <textarea value="header" class="header" ng-model="atpostCtrl.ape.fbook" required></textarea>
+<br> soundcloud url: <textarea value="header" class="header" ng-model="atpostCtrl.ape.sndcld" required></textarea>
+
+<br><input class="submit" type="submit"></input>
+
+</h3>
 
 </form>
 
+<div class="artist2">
+<img class="prof2" ng-if="atpostCtrl.ape.profpic" ng-src="{{atpostCtrl.ape.profpic}}">
+</div>
+
+
+</div>
+
+
+
+<h2 align="center">
+New Tape
+
+
+</h2>
+<div class="post">
+
+<div class="prev2">
+
+<article align="center">
+<a >fasd</a>
+</article>
+</div>
+
+
+<form name="tapeForm">
+
+<h3 align="center">
+
+<br> name: <textarea value="header" class="header" ng-model="atpostCtrl.ape.artist" required></textarea>
+<br> picture url: <textarea value="header" class="header" ng-model="atpostCtrl.ape.profpic" required></textarea>
+<br> bandcamp url: <textarea value="header" class="header" ng-model="atpostCtrl.ape.bndcmp" required></textarea>
+<br> facebook url: <textarea value="header" class="header" ng-model="atpostCtrl.ape.fbook" required></textarea>
+<br> soundcloud url: <textarea value="header" class="header" ng-model="atpostCtrl.ape.sndcld" required></textarea>
+
+<br><input class="submit" type="submit"></input>
+
+</h3>
+
+</form>
+
+
+
+
+</div>
 
 
 

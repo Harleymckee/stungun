@@ -463,8 +463,21 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.75);
 
 }
 
+.artist2 {
+  margin-top: -35px;
+    img.prof2 {
+   display: block;
+    margin-left: auto;
+    margin-right: auto;
 
+height: 251px;
+width: 250px;
+   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+-moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25); 
 
+    }
+  }
 .artist {
 
 
@@ -482,7 +495,7 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25);
 
 height: 251px;
 width: 250px;
--webkit-filter: greyscale(1);
+//-webkit-filter: greyscale(1);
 
     }
    
@@ -795,4 +808,12 @@ text-indent: 2em;
   margin-top: -20px;
   margin-bottom: 20px; 
   width: 350px;
+}
+
+.prev2 {
+  margin-left: auto;
+margin-right: auto;
+width:17%;
+border:3px solid black;
+
 }
