@@ -46,31 +46,47 @@ Sup Guys
 </div> 
 
 
-<div id="tapes" ng-show="panel.isSelected(1)"> 
 
 
 
-<div class="tape" ng-repeat="stunah in stun.stunner">
-
-<div ng-if="stunah.tapes">
 
 
-<div ng-repeat="tape in stunah.tapes">
 
 
-<a ng-href="{{tape.storeurl}}">
-<img src="{{tape.imgurl}}">
-</a>
-
-</div>
+		<div id="tapes" ng-show="panel.isSelected(1)"> 
 
 
-</div>
+<!--
+<div ng-repeat="stunah in stun.stunner" ng-if="stunah.tapes" >
+-->
+<!-- <div ng-if="stunah.tapes"> </div>--> 
 
-</div>
+
+			<div  class="tape"  ng-repeat="tape in stun.tapes">
 
 
-</div>  
+							<a ng-href="{{tape.storeurl}}">
+							<img src="{{tape.imgurl}}">
+							</a>
+
+
+
+			</div>
+
+
+
+
+
+		</div>  
+
+
+
+
+
+
+
+
+
 
 
 

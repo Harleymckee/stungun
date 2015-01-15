@@ -9,10 +9,10 @@ app.filter('backwards', function() {
 
 
 
-app.factory('Stun', ["$firebase", function($firebase) {
+app.factory('Stun', ['$firebase', function($firebase) {
 
 
-var ref2 = new Firebase("https://stungun.firebaseio.com/artists");
+var ref2 = new Firebase('https://stungun.firebaseio.com/artists');
 
   var sync2 = $firebase(ref2);
 
@@ -20,6 +20,11 @@ var stunArray = sync2.$asArray();
   //var ref = new Firebase("https://stungun.firebaseio.com/artists");
   //var sync = $firebase(ref);
 
+
+
+
+//$scope.notes = stunArray;
+//console.log($scope.notes.length);
 
 		  stunnerz = stunArray;
 
@@ -71,82 +76,62 @@ return stunnerz;
 
 
 
-	app.controller('StunController', ['$scope', '$firebase', function($scope, $firebase) {
+	app.controller('StunController', ['$scope', 'Stun', function($scope, Stun) {
 
 
-					// WTF 
-
-var ref3 = new Firebase("https://stungun.firebaseio.com/artists");
-
-  var sync3 = $firebase(ref3);
-
-var stunArray2 = sync3.$asArray();
-
-this.stunner = stunArray2;
-		
-console.log(this.stunner);
-
-var tapeArray = []
+Stun.$loaded().then(function(data) {
 
 
-for (i = 0; i < stunArray2.length; i++){
-			var tapers = stunArray2[i].tapes;
+var stunArray = [];
 
-			if (tapers.length > 0){
-
-			for (i = 0; i < tapers.length; i++){
-				console.log(tapers[i]);
-				tapeArray.push(tapers[i]);
-
-			}
-			}
-		} 
+   //console.log(data.length); 
 
 
-//console.log(tapeArray);
+for (i = 0; i < data.length; i++){
 
-/*
+	var tapers = data[i].tapes;
 
-		var tapeArray = []
+	if (tapers){
 
-		for (var i = 0; i < Stun.length; i++) {
-					if (Stun[i].tapes) {
+
+			if (tapers.length > 1) {
+
+			for (t = 0; t < tapers.length; t++) {
 			
-			var tapez = Stun[i].tapes; 
-					
-
-				tapeArray.push(tapez);
-				
-			}
-						
-			    	 
-			} */
-
-
-var totalTapes = [];
-
-for (var i = 0; i < tapeArray.length; i++) {
 		
-		var tpAr = tapeArray[i];
-		$.merge (totalTapes , tpAr)
-		//totalTapes.concat(tpAr); 
+			stunArray.push(tapers[t]);
 
-	} 
+		}
 
 
-//	this.tapes = totalTapes;
+		} else {
+				for (p = 0; p < tapers.length; p++) {
+			
+	
+			stunArray.push(tapers[p]);
+		}
 
 
 
+			}
+
+}
+
+}
+return stunArray;
+
+
+
+
+});
+
+//var tapers = this.tapes;
+
+
+this.stunner = Stun;
 
 
 	}]);
-
-
-
-
-
-
 
 	app.controller('PanelController', ['$scope', function($scope) {	
 	
@@ -169,6 +154,7 @@ for (var i = 0; i < tapeArray.length; i++) {
 
 
 
+/// make a factory for firebase ref
 
 
 	app.controller('BlogController', ['$scope',  '$firebase', /* '$firebaseauth', */ function($scope, $firebase /*, $firebaseauth */) {	
