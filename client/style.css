@@ -388,6 +388,7 @@ p {
     margin-left: auto;
     margin-right: auto; }
     .blogimg img {
+      max-width: 1100%;
       width: 80%;
       height: 80%;
       display: block;

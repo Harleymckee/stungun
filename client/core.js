@@ -26,6 +26,10 @@ var stunArray = sync2.$asArray();
 //$scope.notes = stunArray;
 //console.log($scope.notes.length);
 
+
+
+
+
 		  stunnerz = stunArray;
 
 
@@ -76,13 +80,17 @@ return stunnerz;
 
 
 
+
+
+
 	app.controller('StunController', ['$scope', 'Stun', function($scope, Stun) {
 
+/*
 
 Stun.$loaded().then(function(data) {
 
 
-var stunArray = [];
+var tapeArray = [];
 
    //console.log(data.length); 
 
@@ -94,39 +102,41 @@ for (i = 0; i < data.length; i++){
 	if (tapers){
 
 
-			if (tapers.length > 1) {
+		if (tapers.length > 1) {
 
 			for (t = 0; t < tapers.length; t++) {
 			
 		
-			stunArray.push(tapers[t]);
+			tapeArray.push(tapers[t]);
 
-		}
+		} //for 
 
 
 		} else {
 				for (p = 0; p < tapers.length; p++) {
 			
 	
-			stunArray.push(tapers[p]);
-		}
+			tapeArray.push(tapers[p]);
+		} //for 
 
 
 
-			}
+			} //ifelse
 
-}
+} //if 
 
-}
-return stunArray;
+} //for 
+return tapeArray;
+
+ 
 
 
+}); 
 
+*/
 
-});
-
+console.log(Stun);
 //var tapers = this.tapes;
-
 
 this.stunner = Stun;
 
