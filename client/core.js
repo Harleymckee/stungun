@@ -182,9 +182,7 @@ app.controller('AtpostController', ['$scope', 'Stun', function($scope, Stun) {
 
 			}
 
-		this.tape = {};
-
-	//	console.log(Stun);
+	
 
 		
 
@@ -222,9 +220,11 @@ for (i = 0; i < Stun.length; i++){
 					var sapes = Stun[i].tapes;
 					sapes.push(this.tape);
 
+
+
 					} // if
 				
-
+					Stun.$save(i);
 
 				}// if 
 		
@@ -232,7 +232,10 @@ for (i = 0; i < Stun.length; i++){
 
 			} // for 
 
-Stun.$save();
+
+	this.tape = {};
+
+
 				
 } 
 
