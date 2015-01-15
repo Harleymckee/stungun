@@ -46,19 +46,32 @@ Sup Guys
 </div> 
 
 
-<div id="tapes" ng-show="panel.isSelected(1)"> <!-- tapes -->
+<div id="tapes" ng-show="panel.isSelected(1)"> 
 
 
 
-<div class="tape" ng-repeat="tape in stun.tapes" >
+<div class="tape" ng-repeat="stunah in stun.stunner">
+
+<div ng-if="stunah.tapes">
+
+
+<div ng-repeat="tape in stunah.tapes">
+
+
 <a ng-href="{{tape.storeurl}}">
 <img src="{{tape.imgurl}}">
 </a>
+
 </div>
 
 
+</div>
 
-</div> <!-- / tapes -->
+</div>
+
+
+</div>  
+
 
 
 <div id="artists"  ng-show="panel.isSelected(2)">

@@ -71,19 +71,26 @@ return stunnerz;
 
 
 
-	app.controller('StunController', ['$scope', 'Stun', function($scope, Stun) {
+	app.controller('StunController', ['$scope', '$firebase', function($scope, $firebase) {
 
 
-					
+					// WTF 
 
-			this.stunner = Stun;
+var ref3 = new Firebase("https://stungun.firebaseio.com/artists");
+
+  var sync3 = $firebase(ref3);
+
+var stunArray2 = sync3.$asArray();
+
+this.stunner = stunArray2;
+		
+console.log(this.stunner);
+
+var tapeArray = []
 
 
-			
-var tapeArray = [];
-
-for (i = 0; i < Stun.length; i++){
-			var tapers = Stun[i].tapes;
+for (i = 0; i < stunArray2.length; i++){
+			var tapers = stunArray2[i].tapes;
 
 			if (tapers.length > 0){
 
@@ -93,12 +100,14 @@ for (i = 0; i < Stun.length; i++){
 
 			}
 			}
-		}
-
-		console.log(tapeArray);
+		} 
 
 
-		/*	var tapeArray = []
+//console.log(tapeArray);
+
+/*
+
+		var tapeArray = []
 
 		for (var i = 0; i < Stun.length; i++) {
 					if (Stun[i].tapes) {
@@ -110,8 +119,8 @@ for (i = 0; i < Stun.length; i++){
 				
 			}
 						
-			    	
-			}
+			    	 
+			} */
 
 
 var totalTapes = [];
@@ -122,9 +131,8 @@ for (var i = 0; i < tapeArray.length; i++) {
 		$.merge (totalTapes , tpAr)
 		//totalTapes.concat(tpAr); 
 
-	} */
+	} 
 
-//console.log(totalTapes);
 
 //	this.tapes = totalTapes;
 
@@ -133,6 +141,12 @@ for (var i = 0; i < tapeArray.length; i++) {
 
 
 	}]);
+
+
+
+
+
+
 
 	app.controller('PanelController', ['$scope', function($scope) {	
 	
@@ -155,7 +169,6 @@ for (var i = 0; i < tapeArray.length; i++) {
 
 
 
-/// make a factory for firebase ref
 
 
 	app.controller('BlogController', ['$scope',  '$firebase', /* '$firebaseauth', */ function($scope, $firebase /*, $firebaseauth */) {	
