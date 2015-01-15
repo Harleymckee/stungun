@@ -9,15 +9,23 @@ app.filter('backwards', function() {
 
 
 
-app.factory('Stun', function() {
+app.factory('Stun', ["$firebase", function($firebase) {
 
 
+var ref2 = new Firebase("https://stungun.firebaseio.com/artists");
 
+  var sync2 = $firebase(ref2);
+
+var stunArray = sync2.$asArray();
   //var ref = new Firebase("https://stungun.firebaseio.com/artists");
   //var sync = $firebase(ref);
 
+console.log(stunArray);
+		  stunnerz = stunArray;
 
-		 stunnerz = [
+
+		/*
+	 stunnerp =[
 
 						{"artist" : "New Holland",
 						"profpic" : "imgs/alexnelmo.png",
@@ -51,14 +59,14 @@ app.factory('Stun', function() {
 						"tapes" : []
 							}
 
-							];
-
+							]; 
+							*/
 
 	
 return stunnerz;
 
 
-});
+}]);
 
 
 
@@ -137,7 +145,7 @@ for (var i = 0; i < tapeArray.length; i++) {
 
 
 var ref = new Firebase("https://stungun.firebaseio.com/blog");
-//var auth = $firebaseAuth(ref);
+
   var sync = $firebase(ref);
 
 	
@@ -158,11 +166,18 @@ app.controller('AtpostController', ['$scope', 'Stun', function($scope, Stun) {
 
 
 			this.ape = {};
+			//this.ape.tapes = Object.create(Array.prototype);
 			this.stunner = Stun;
 
-			this.addArtist = function(artist) {
-				Stun.push(this.ape);
+			this.addArtist = function() {
+				
+
+
+				Stun.$add(this.ape);
+
+
 				this.ape = {};
+				//this.ape.tapes = Object.create(Array.prototype);
 
 
 			}
@@ -173,16 +188,56 @@ app.controller('AtpostController', ['$scope', 'Stun', function($scope, Stun) {
 
 		
 
-			this.clkArt = function(tape) {
+			this.clkArt = function(artist) {
 
 		
-
-				this.art = tape;
+			
+				this.art = artist;
 
 				//console.log(this.art);
 
 			};
 
+
+
+			this.addTape = function() {
+
+				var pip = this.art;
+
+
+				var pipp = pip.$id;
+
+
+for (i = 0; i < Stun.length; i++){
+
+
+				if (Stun[i].$id === pipp) {
+				
+					if (!Stun[i].tapes) {
+				
+				Stun[i].tapes = [this.tape];
+
+
+							} else {
+					var sapes = Stun[i].tapes;
+					sapes.push(this.tape);
+
+					} // if
+				
+
+
+				}// if 
+		
+				
+
+			} // for 
+
+Stun.$save();
+				
+} 
+
+
+			
 
 
 

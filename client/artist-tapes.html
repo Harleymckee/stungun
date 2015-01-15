@@ -84,16 +84,23 @@ Reset
 </article>
 </div>
 
-<form name="tapeForm" ng-if="atpostCtrl.art" novalidate>
+
+
+
+
+
+<form name="tapeForm" ng-if="atpostCtrl.art" ng-submit="tapeForm.$valid && atpostCtrl.addTape()" novalidate>
 
 <h3 align="center">
 
 <br> name: <textarea value="header" class="header" ng-model="atpostCtrl.tape.name" required></textarea>
 <br> picture url: <textarea value="header" class="header" ng-model="atpostCtrl.tape.imgurl" required></textarea>
-<br> bigcartel url: <textarea value="header" class="header" ng-model="atpostCtrl.tape.storeurl" required></textarea>
-<br> bandcamp url: <textarea value="header" class="header" ng-model="atpostCtrl.tape.digitalurl" required></textarea>
+<br> bigcartel url: <textarea value="header" class="header" ng-model="atpostCtrl.tape.storeurl"></textarea>
+<br> bandcamp url: <textarea value="header" class="header" ng-model="atpostCtrl.tape.digitalurl"></textarea>
 
-<br><input class="submit" type="submit"></input>
+<br>
+<img src="https://gp4.googleusercontent.com/-qgVf780dzWA/AAAAAAAAAAI/AAAAAAAAAAA/pu0FU4GxAf4/s48-c-k-no/photo.jpg" ng-show="tapeForm.$valid">
+<input class="submit" type="submit"></input>
 
 </h3>
 
