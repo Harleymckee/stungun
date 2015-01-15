@@ -20,7 +20,7 @@ var stunArray = sync2.$asArray();
   //var ref = new Firebase("https://stungun.firebaseio.com/artists");
   //var sync = $firebase(ref);
 
-console.log(stunArray);
+
 		  stunnerz = stunArray;
 
 
@@ -74,23 +74,41 @@ return stunnerz;
 	app.controller('StunController', ['$scope', 'Stun', function($scope, Stun) {
 
 
-		
-
 					
 
 			this.stunner = Stun;
 
 
-		this.ape = {};
+			
+var tapeArray = [];
+
+for (i = 0; i < Stun.length; i++){
+			var tapers = Stun[i].tapes;
+
+			if (tapers.length > 0){
+
+			for (i = 0; i < tapers.length; i++){
+				console.log(tapers[i]);
+				tapeArray.push(tapers[i]);
+
+			}
+			}
+		}
+
+		console.log(tapeArray);
 
 
-			var tapeArray = []
+		/*	var tapeArray = []
 
-			for (var i = 0; i < stunnerz.length; i++) {
+		for (var i = 0; i < Stun.length; i++) {
+					if (Stun[i].tapes) {
+			
+			var tapez = Stun[i].tapes; 
+					
 
-						var tapes = stunnerz[i].tapes; 
-
-				tapeArray.push(tapes);
+				tapeArray.push(tapez);
+				
+			}
 						
 			    	
 			}
@@ -104,9 +122,11 @@ for (var i = 0; i < tapeArray.length; i++) {
 		$.merge (totalTapes , tpAr)
 		//totalTapes.concat(tpAr); 
 
-	}
+	} */
 
-	this.tapes = totalTapes;
+//console.log(totalTapes);
+
+//	this.tapes = totalTapes;
 
 
 
