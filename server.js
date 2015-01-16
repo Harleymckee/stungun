@@ -4,6 +4,8 @@ var mongoose = require('mongoose');
 var fs = require('fs');
 var app = express();
 
+    var bodyParser = require('body-parser');    
+    var methodOverride = require('method-override'); 
 
 
 
@@ -11,6 +13,10 @@ var app = express();
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.use(express.static(path.join(__dirname + '/client')));
+app.use(bodyParser.urlencoded({'extended':'true'}));   
+app.use(bodyParser.json());     
+app.use(bodyParser.json({ type: 'application/vnd.api+json' })); 
+app.use(methodOverride());
 
 
 mongoose.connect('mongodb://localhost:27017/stungun');

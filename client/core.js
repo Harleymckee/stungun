@@ -90,8 +90,23 @@ var here = this;
 $http.get('/artists')
 .then( function(response) {
 
-	console.log(response.data)
+	var arr = response.data;
+
+	var tapeArray = [];
+	for (i = 0; i < arr.length; i++) {
+		var tapes = arr[i].tapes;
+		if (tapes.length > 0) {
+			
+			for (t = 0; t < tapes.length; t++)
+				var tape = tapes[t];
+			tapeArray.push(tape);
+		}
+
+	}
+
+
 	here.stunner = response.data;
+	here.tapes = tapeArray;
 	
 });
 
