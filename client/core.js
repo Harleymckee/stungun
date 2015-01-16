@@ -1,3 +1,5 @@
+
+
 var app = angular.module('stungun', ['firebase']);
 
 
@@ -9,142 +11,64 @@ app.filter('backwards', function() {
 
 
 
-app.factory('Stun', ['$firebase', function($firebase) {
 
 
-/*
+/*app.factory('Stun', ['$http', function($http) {
+   return $http.get('/artists');
+  }]);*/
 
-var ref2 = new Firebase('https://stungun.firebaseio.com/artists');
 
-  var sync2 = $firebase(ref2);
+	app.directive('theStuff', function() {
+		return {
 
-var stunArray = sync2.$asArray();
+			restrict: 'E',
+			templateUrl: 'the-stuff.html',
+			controller: 'StunController',
+			controllerAs: 'stun'
 
+		};
+	});
 
+		app.directive('theBlog', function() {
+		return {
 
-		  stunnerz = stunArray;
+			restrict: 'E',
+			templateUrl: 'the-blog.html',
+			controller: 'BlogController',
+			controllerAs: 'blogCtrl' 
 
+		};
+	});
 
-	
-return stunnerz; */
+		app.directive('blogPoster', function() {
+		return {
 
+			restrict: 'E',
+			templateUrl: 'blog-poster.html',
+			controller: 'BpostController',
+			controllerAs: 'blugCtrl' 
 
-}]);
+		};
+	});
 
+		app.directive('artistTapes', function() {
+		return {
 
-app.factory('Tapes', ['$firebase', 'Stun', function($firebase, Stun) {
+			restrict: 'E',
+			templateUrl: 'artist-tapes.html',
+			controller: 'AtpostController',
+			controllerAs: 'atpostCtrl' 
 
+		};
+	});
 
 
-/*function getKey(obj) {
-var key = obj.$inst().$ref().key();
 
-return key;
 
 
-};
+app.controller('StunController', ['$scope', '$http', function($scope, $http) {
 
 
-for (i = 0; i < Stun.length; i++){
-
-getKey(Stun[i]);
-
-} */
-
-
-
-var ref2 = new Firebase('https://stungun.firebaseio.com/artists');
-
-  var sync2 = $firebase(ref2);
-
-var stunArray = sync2.$asArray();
-
-
-
-}]);
-
-
-
-app.controller('StunController', ['$scope', 'Stun', function($scope, Stun) {
-
-
-		function getKey(obj) {
-var key = obj.$inst().$ref().key();
-
-return key;
-
-
-};
-
-keyArray = [];
-for (i = 0; i < Stun.length; i++){
-
-keyArray.push(getKey(Stun[i]));
-
-}
-
-console.log(keyArray)
-
-/*
-
-Stun.$loaded().then(function(data) {
-
-
-var tapeArray = [];
-
-   //console.log(data.length); 
-
-
-for (i = 0; i < data.length; i++){
-
-	var tapers = data[i].tapes;
-
-	if (tapers){
-
-
-		if (tapers.length > 1) {
-
-			for (t = 0; t < tapers.length; t++) {
-			
-		
-			tapeArray.push(tapers[t]);
-
-		} //for 
-
-
-		} else {
-				for (p = 0; p < tapers.length; p++) {
-			
-	
-			tapeArray.push(tapers[p]);
-		} //for 
-
-
-
-			} //ifelse
-
-} //if 
-
-} //for 
-return tapeArray;
-
- 
-
-
-}); 
-
-*/
-
-console.log(Stun);
-//var tapers = this.tapes;
-
-this.stunner = Stun;
-
-
-	}]);
-
-	app.controller('PanelController', ['$scope', function($scope) {	
-	
 
 		$scope.tab = 0;
 
@@ -160,14 +84,25 @@ this.stunner = Stun;
 		};
 
 
+var here = this;
+
+
+$http.get('/artists')
+.then( function(response) {
+
+	console.log(response.data)
+	here.stunner = response.data;
+	
+});
+
+
+
 	}]);
 
 
 
-/// make a factory for firebase ref
 
-
-	app.controller('BlogController', ['$scope',  '$firebase', /* '$firebaseauth', */ function($scope, $firebase /*, $firebaseauth */) {	
+app.controller('BlogController', ['$scope',  '$firebase', /* '$firebaseauth', */ function($scope, $firebase /*, $firebaseauth */) {	
 
 
 
@@ -189,7 +124,7 @@ this.blogger = blogArray;
 
 	}]);
 
-
+/*
 
 app.controller('AtpostController', ['$scope', 'Stun', function($scope, Stun) {	
 
@@ -269,33 +204,8 @@ for (i = 0; i < Stun.length; i++){
 } 
 
 
-			
 
-
-
-		// useful 
-		/*
-
-var tapeArray = [];
-
-for (i = 0; i < Stun.length; i++){
-			var tapers = Stun[i].tapes;
-
-			if (tapers.length > 0){
-
-			for (i = 0; i < tapers.length; i++){
-				console.log(tapers[i]);
-				tapeArray.push(tapers[i]);
-
-			}
-			}
-		}
-
-		console.log(tapeArray);
-		
-	*/
-
-	}]);
+	}]); */
 
 app.controller('BpostController', ['$scope', '$firebase', function($scope, $firebase) {	
 
@@ -345,54 +255,12 @@ this.blug.img2 = "";
 
 
 
-
-	}]);
-
+}]);
 
 
-	app.directive('theStuff', function() {
-		return {
 
-			restrict: 'E',
-			templateUrl: 'the-stuff.html',
-			controller: 'StunController',
-			controllerAs: 'stun'
 
-		};
-	});
 
-		app.directive('theBlog', function() {
-		return {
-
-			restrict: 'E',
-			templateUrl: 'the-blog.html',
-			controller: 'BlogController',
-			controllerAs: 'blogCtrl' 
-
-		};
-	});
-
-		app.directive('blogPoster', function() {
-		return {
-
-			restrict: 'E',
-			templateUrl: 'blog-poster.html',
-			controller: 'BpostController',
-			controllerAs: 'blugCtrl' 
-
-		};
-	});
-
-		app.directive('artistTapes', function() {
-		return {
-
-			restrict: 'E',
-			templateUrl: 'artist-tapes.html',
-			controller: 'AtpostController',
-			controllerAs: 'atpostCtrl' 
-
-		};
-	});
 
 
 

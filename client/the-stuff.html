@@ -1,14 +1,13 @@
 
 
-
 <div id="bodwrap">
-<section ng-controller="PanelController as panel">
+
 
 
 
 <body>
 <div id="logo"> <!-- wrap -->
-<img src="imgs/stungunlogotransparent.png" height="120px" width="120px" ng-click="panel.selectTab(0)">
+<img src="imgs/stungunlogotransparent.png" height="120px" width="120px" ng-click="stun.selectTab(0)">
 
 
 </div>
@@ -19,16 +18,16 @@
 
 
 
-							<div class="naver colors" ng-click="panel.selectTab(1)" ng-class="{active: panel.isSelected(1)}">
+							<div class="naver colors" ng-click="stun.selectTab(1)" ng-class="{active: stun.isSelected(1)}">
 							Tapes 
 							</div>
 
-							<div class="naver colors" ng-click="panel.selectTab(2)" ng-class="{active: panel.isSelected(2)}">
+							<div class="naver colors" ng-click="stun.selectTab(2)" ng-class="{active: stun.isSelected(2)}">
 							Artists
 							</div>
 
 
-							<div class="naver colors" ng-click="panel.selectTab(3)" ng-class="{active: panel.isSelected(3)}">
+							<div class="naver colors" ng-click="stun.selectTab(3)" ng-class="{active: stun.isSelected(3)}">
 							E-mail 
 							</div>
 
@@ -39,7 +38,11 @@
 
 
 
-<div id="supguys" ng-show="panel.isSelected(0)" style="font-size:36px;">
+
+
+
+
+<div id="supguys" ng-show="stun.isSelected(0)" style="font-size:36px;">
 <p align="center">
 Sup Guys
 </p>
@@ -53,7 +56,7 @@ Sup Guys
 
 
 
-		<div id="tapes" ng-show="panel.isSelected(1)"> 
+		<div id="tapes" ng-show="stun.isSelected(1)"> 
 
 
 
@@ -79,6 +82,7 @@ Sup Guys
 
 		</div>  
 
+
 </div>
 
 
@@ -91,11 +95,10 @@ Sup Guys
 
 
 
-<div id="artists"  ng-show="panel.isSelected(2)">
+<div id="artists"  ng-show="stun.isSelected(2)">
 
 
-
-				<div class="artist" ng-repeat="stunah in stun.stunner" >
+			<div class="artist" ng-repeat="stunah in stun.stunner" >
 				<img class="prof" ng-src="{{stunah.profpic}}">
 					<div class="desc">{{stunah.artist}}
 					</div>
@@ -113,13 +116,19 @@ Sup Guys
 								</a>  
 								</div>
 					</div>
-				</div>
+				</div> 
 
 
 </div> 
 
 
-<div id="email" class="animate-show" ng-show="panel.isSelected(3)">
+
+
+
+
+
+
+<div id="email" class="animate-show" ng-show="stun.isSelected(3)">
 <img src="http://media.giphy.com/media/5t8WBZIVID7oI/giphy.gif" width="140px" height="140px"/>
 <p align="center">
 Anything:
@@ -127,8 +136,9 @@ Anything:
 </p>
 </div> 
 
+
+
 					
 
-</section>
 </div> <!-- bodwrap -->
 

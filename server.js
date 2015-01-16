@@ -42,7 +42,10 @@ app.get('/artists', function(req, res) {
 
 	mongoose.model('artists').find(function(err, artists) {
 
-		res.send(artists);
+		if (err)
+                res.send(err)
+
+		res.json(artists);
 	});
 
 });
