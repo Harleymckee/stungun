@@ -12,78 +12,78 @@ app.filter('backwards', function() {
 app.factory('Stun', ['$firebase', function($firebase) {
 
 
+/*
+
 var ref2 = new Firebase('https://stungun.firebaseio.com/artists');
 
   var sync2 = $firebase(ref2);
 
 var stunArray = sync2.$asArray();
-  //var ref = new Firebase("https://stungun.firebaseio.com/artists");
-  //var sync = $firebase(ref);
-
-
-
-
-//$scope.notes = stunArray;
-//console.log($scope.notes.length);
-
-
 
 
 
 		  stunnerz = stunArray;
 
 
-		/*
-	 stunnerp =[
-
-						{"artist" : "New Holland",
-						"profpic" : "imgs/alexnelmo.png",
-						"bndcmp" : "https://newholland.bandcamp.com/music",
-						"fbook" : "https://www.facebook.com/newhollandmusic",
-						"sndcld" : "#",
-						"tapes" : [{ "name" : "New Holland",
-									"imgurl" : "imgs/newhollandtapeart.jpg" ,
-									"storeurl" : "#" ,
-									"digitalurl" : "https://newholland.bandcamp.com/album/new-holland" 
-											}]
-
-							},
-
-
-						{"artist" : "Grotto Girl",
-						"profpic" : "imgs/grottopic.jpg",
-						"bndcmp" : "#",
-						"fbook" : "#",
-						"sndcld" : "#",
-						"tapes" : []
-							},
-
-
-
-						{"artist" : "Sprawling",
-						"profpic" : "imgs/sprawlband.jpg",
-						"bndcmp" : "#",
-						"fbook" : "#",
-						"sndcld" : "#",
-						"tapes" : []
-							}
-
-							]; 
-							*/
-
 	
-return stunnerz;
+return stunnerz; */
+
+
+}]);
+
+
+app.factory('Tapes', ['$firebase', 'Stun', function($firebase, Stun) {
+
+
+
+/*function getKey(obj) {
+var key = obj.$inst().$ref().key();
+
+return key;
+
+
+};
+
+
+for (i = 0; i < Stun.length; i++){
+
+getKey(Stun[i]);
+
+} */
+
+
+
+var ref2 = new Firebase('https://stungun.firebaseio.com/artists');
+
+  var sync2 = $firebase(ref2);
+
+var stunArray = sync2.$asArray();
+
 
 
 }]);
 
 
 
+app.controller('StunController', ['$scope', 'Stun', function($scope, Stun) {
 
 
+		function getKey(obj) {
+var key = obj.$inst().$ref().key();
+
+return key;
 
 
-	app.controller('StunController', ['$scope', 'Stun', function($scope, Stun) {
+};
+
+keyArray = [];
+for (i = 0; i < Stun.length; i++){
+
+keyArray.push(getKey(Stun[i]));
+
+}
+
+console.log(keyArray)
 
 /*
 

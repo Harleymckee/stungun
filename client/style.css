@@ -272,7 +272,7 @@ body {
     -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
     -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
     box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
-    height: 251px;
+    height: 253px;
     width: 250px; }
   .artist img.prof:hover {
     cursor: pointer;
@@ -388,7 +388,7 @@ p {
     margin-left: auto;
     margin-right: auto; }
     .blogimg img {
-      max-width: 1100%;
+      max-width: 100%;
       width: 80%;
       height: 80%;
       display: block;

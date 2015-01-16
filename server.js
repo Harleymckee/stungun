@@ -1,14 +1,25 @@
 var express = require('express');
-//var jade = require('jade');
 var path = require('path'); 
+var mongoose = require('mongoose');
+var fs = require('fs');
 var app = express();
 
 
 
 
-app.use(express.static(path.join(__dirname + '/client')));
+
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
+app.use(express.static(path.join(__dirname + '/client')));
+
+
+mongoose.connect('mongodb://localhost:27017/stungun');
+
+
+
+fs.readdirSync(__dirname + '/models').forEach(function(filename) {
+	if (~filename.indexOf('.js')) require(__dirname + '/models/' + filename)
+});
 
 
 function home (req, res) {
@@ -23,6 +34,22 @@ app.get('/admin', function(req, res) {
 
 	  res.render('admin.html');
 });
+
+
+
+
+app.get('/artists', function(req, res) {
+
+	mongoose.model('artists').find(function(err, artists) {
+
+		res.send(artists);
+	});
+
+});
+
+
+
+
 
 
 
