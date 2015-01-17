@@ -117,22 +117,30 @@ $http.get('/artists')
 
 
 
-app.controller('BlogController', ['$scope',  '$firebase', /* '$firebaseauth', */ function($scope, $firebase /*, $firebaseauth */) {	
+app.controller('BlogController', ['$scope', '$http', function($scope, $http) {	
+
+
+var here = this;
+
+$http.get('/blog')
+.then( function(response) {
+
+here.blogger = response.data;
+
+	});
 
 
 
+//var ref = new Firebase("https://stungun.firebaseio.com/blog");
 
-
-var ref = new Firebase("https://stungun.firebaseio.com/blog");
-
-  var sync = $firebase(ref);
+ // var sync = $firebase(ref);
 
 	
 	//console.log(auth);
 					
-var blogArray = sync.$asArray();
+//var blogArray = sync.$asArray();
 
-this.blogger = blogArray; 
+//this.blogger = blogArray; 
 
 
 
