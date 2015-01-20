@@ -60,10 +60,6 @@ app.route('/artists')
 
 
 
-
-
-
-
 		})
 
 
@@ -81,18 +77,33 @@ app.route('/artists')
 	});
 
 
+var theMedia = mongoose.model('blogs');
 
-app.get('/blog', function(req, res) {
+app.route('/blog')
 
-	mongoose.model('blogs').find(function(err, blog) {
+	.post(function(req, res) {
 
-		if (err)
-                res.send(err)
-           
-		res.send(blog); 
+
+
+	  theMedia.create(req.body, function (err, post) {
+    	if (err) return next(err);
+    	res.json(post);
+ 		 });
+
+
+	})
+
+	.get(function(req, res) {
+
+		theMedia.find(function(err, blog) {
+
+			if (err)
+	                res.send(err)
+	           
+			res.send(blog); 
+		});
+
 	});
-
-});
 
 
 

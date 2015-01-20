@@ -164,10 +164,7 @@ this.ape = {};
 this.addArtist = function() {
 console.log(this.ape)
 
-	 $http.post('/artists', this.ape).then( function(){
-	 	console.log('posted');
-
-	 })
+	 $http.post('/artists', this.ape);
 		
 
 	this.ape = {};
@@ -180,6 +177,9 @@ console.log(this.ape)
 
 	
 				this.art = artist;
+				console.log(artist);
+
+				artist.id
 
 			};
 
@@ -187,7 +187,7 @@ console.log(this.ape)
 		}]); 
 
 
-/*$http.post('/artists', this.ape)
+/*
 
 
 this.addTape = function() {
@@ -197,26 +197,28 @@ this.addTape = function() {
 
 				var pipp = pip.$id;
 
+var stun = this.stunner
 
-for (i = 0; i < Stun.length; i++){
+for (i = 0; i < stun.length; i++){
 
 
-				if (Stun[i].$id === pipp) {
+				if (stun[i].$id === pipp) {
 				
-					if (!Stun[i].tapes) {
+					if (!stun[i].tapes) {
 				
-				Stun[i].tapes = [this.tape];
+				stun[i].tapes = [this.tape];
 
 
 							} else {
-					var sapes = Stun[i].tapes;
+					var sapes = stun[i].tapes;
 					sapes.push(this.tape);
 
+					 $http.put('/students/' + this.art.id + '/tapes/', this.tape);
 
 
 					} // if
 				
-					Stun.$save(i);
+				
 
 				}// if 
 		
@@ -238,22 +240,10 @@ for (i = 0; i < Stun.length; i++){
 
 
 
-app.controller('BpostController', ['$scope', '$firebase', function($scope, $firebase) {	
-
-
-
-var ref = new Firebase("https://stungun.firebaseio.com/blog");
-  var sync = $firebase(ref);
-
-	
-					
-var messagesArray = sync.$asArray();
+app.controller('BpostController', ['$scope', '$http', function($scope, $http) {	
 
 
 	this.blug = {};
-	
-
-
 
 	this.addPost = function(post) {
 
@@ -276,9 +266,11 @@ var dOutput =
 
 
 
-	messagesArray.$add(this.blug);
 
-	//console.log(messagesArray);
+	 $http.post('/blog', this.blug);
+
+
+
 this.blug.img1 = "";
 this.blug.img2 = "";
 	this.blug = {};
