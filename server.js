@@ -48,9 +48,7 @@ var theArts = mongoose.model('artists');
 
 app.route('/artists')
 
-
 	.post(function(req, res) {
-
 
 
 	  theArts.create(req.body, function (err, post) {
@@ -59,9 +57,7 @@ app.route('/artists')
  		 });
 
 
-
 		})
-
 
 	.get(function(req, res) {
 
@@ -75,6 +71,31 @@ app.route('/artists')
 
 
 	});
+
+	app.route('/tapes/:id')
+
+
+	.post(function(req, res) {
+
+
+		})
+
+	.get(function(req, res) {
+
+		theArts.find({ _id : req.param('id') }, function(err, data) {
+
+			if (err)
+	                res.send(err)
+
+	     
+			res.send(data);
+		})
+
+
+	});
+
+
+
 
 
 var theMedia = mongoose.model('blogs');

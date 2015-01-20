@@ -161,15 +161,15 @@ here.stunner = response.data;
 
 this.ape = {};
 
-this.addArtist = function() {
-console.log(this.ape)
+		this.addArtist = function() {
+		console.log(this.ape)
 
-	 $http.post('/artists', this.ape);
-		
+			 $http.post('/artists', this.ape);
+				
 
-	this.ape = {};
+			this.ape = {};
 
-			}
+					}
 
 
 
@@ -179,7 +179,6 @@ console.log(this.ape)
 				this.art = artist;
 				console.log(artist);
 
-				artist.id
 
 			};
 
