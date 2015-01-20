@@ -3,19 +3,30 @@
 var app = angular.module('stungun', ['firebase']);
 
 
-app.filter('backwards', function() {
+ app.filter('backwards', function() {
   return function(items) {
     return items.slice().reverse();
   };
 });
+ 
 
 
 
 
+app.factory('Stun', ['$http', function($http) {
 
-/*app.factory('Stun', ['$http', function($http) {
+
+
    return $http.get('/artists');
-  }]);*/
+
+
+
+
+  }]);
+
+
+
+
 
 
 	app.directive('theStuff', function() {
@@ -66,7 +77,7 @@ app.filter('backwards', function() {
 
 
 
-app.controller('StunController', ['$scope', '$http', function($scope, $http) {
+app.controller('StunController', ['$scope', 'Stun', function($scope, Stun) {
 
 
 
@@ -87,8 +98,7 @@ app.controller('StunController', ['$scope', '$http', function($scope, $http) {
 var here = this;
 
 
-$http.get('/artists')
-.then( function(response) {
+Stun.then( function(response) {
 
 	var arr = response.data;
 
@@ -125,67 +135,62 @@ var here = this;
 $http.get('/blog')
 .then( function(response) {
 
+//console.log(response.data);
 here.blogger = response.data;
 
 	});
 
 
 
-//var ref = new Firebase("https://stungun.firebaseio.com/blog");
-
- // var sync = $firebase(ref);
-
-	
-	//console.log(auth);
-					
-//var blogArray = sync.$asArray();
-
-//this.blogger = blogArray; 
-
-
 
 
 	}]);
 
-/*
-
-app.controller('AtpostController', ['$scope', 'Stun', function($scope, Stun) {	
 
 
-			this.ape = {};
-			//this.ape.tapes = Object.create(Array.prototype);
-			this.stunner = Stun;
-
-			this.addArtist = function() {
-				
+app.controller('AtpostController', ['$scope', '$http', function($scope, $http) {	
 
 
-				Stun.$add(this.ape);
+var here = this;
+$http.get('/artists')
+.then( function(response) {
 
+here.stunner = response.data;
 
-				this.ape = {};
-				//this.ape.tapes = Object.create(Array.prototype);
+	});
 
+this.ape = {};
+
+this.addArtist = function() {
+console.log(this.ape)
+
+	 $http.post('/artists', this.ape).then( function(){
+	 	console.log('posted');
+
+	 })
+		
+
+	this.ape = {};
 
 			}
 
+
+
+	this.clkArt = function(artist) {
+
 	
-
-		
-
-			this.clkArt = function(artist) {
-
-		
-			
 				this.art = artist;
-
-				//console.log(this.art);
 
 			};
 
 
+		}]); 
 
-			this.addTape = function() {
+
+/*$http.post('/artists', this.ape)
+
+
+this.addTape = function() {
 
 				var pip = this.art;
 
@@ -226,9 +231,12 @@ for (i = 0; i < Stun.length; i++){
 				
 } 
 
+*/
 
 
-	}]); */
+
+
+
 
 app.controller('BpostController', ['$scope', '$firebase', function($scope, $firebase) {	
 

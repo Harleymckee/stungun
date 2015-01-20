@@ -4,8 +4,8 @@ var mongoose = require('mongoose');
 var fs = require('fs');
 var app = express();
 
- /*   var bodyParser = require('body-parser');    
-    var methodOverride = require('method-override'); */
+   var bodyParser = require('body-parser');    
+  //  var methodOverride = require('method-override'); 
 
 
 
@@ -13,10 +13,12 @@ var app = express();
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 app.use(express.static(path.join(__dirname + '/client')));
-/* app.use(bodyParser.urlencoded({'extended':'true'}));   
+// app.use(bodyParser());
+app.use(bodyParser.urlencoded({'extended':'true'})); 
+
 app.use(bodyParser.json());     
-app.use(bodyParser.json({ type: 'application/vnd.api+json' })); 
-app.use(methodOverride()); */
+
+//app.use(methodOverride()); 
 
 
 mongoose.connect('mongodb://localhost:27017/stungun');
@@ -42,19 +44,43 @@ app.get('/admin', function(req, res) {
 });
 
 
+var theArts = mongoose.model('artists');
+
+app.route('/artists')
 
 
-app.get('/artists', function(req, res) {
+	.post(function(req, res) {
 
-	mongoose.model('artists').find(function(err, artists) {
 
-		if (err)
-                res.send(err)
 
-		res.send(artists);
+	  theArts.create(req.body, function (err, post) {
+    	if (err) return next(err);
+    	res.json(post);
+ 		 });
+
+
+
+
+
+
+
+		})
+
+
+	.get(function(req, res) {
+
+		theArts.find(function(err, artists) {
+
+			if (err)
+	                res.send(err)
+
+			res.send(artists);
+		})
+
+
 	});
 
-});
+
 
 app.get('/blog', function(req, res) {
 
