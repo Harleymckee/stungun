@@ -126,7 +126,9 @@ Stun.then( function(response) {
 
 	this.deleteArtist = function(id) {
 
-		$http.delete('/artists/' + id)
+		if (confirm('Are ya sure?')) {
+
+$http.delete('/artists/' + id)
             .success(function(data) {
                 here.todos = data;
                 console.log(data);
@@ -134,6 +136,14 @@ Stun.then( function(response) {
             .error(function(data) {
                 console.log('Error: ' + data);
             }); 
+
+
+
+} else {
+    return;
+}
+
+		
     };
 
 

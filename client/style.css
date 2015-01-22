@@ -503,4 +503,8 @@ pre {
   color: red;
   cursor: pointer; }
 
+.adminBut:hover {
+  cursor: pointer;
+  color: yellow; }
+
 /*# sourceMappingURL=style.css.map */
