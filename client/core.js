@@ -33,6 +33,7 @@ app.factory('Stun', ['$http', function($http) {
 		return {
 
 			restrict: 'E',
+			transclude: true,
 			templateUrl: 'the-stuff.html',
 			controller: 'StunController',
 			controllerAs: 'stun'
@@ -77,7 +78,7 @@ app.factory('Stun', ['$http', function($http) {
 
 
 
-app.controller('StunController', ['$scope', 'Stun', function($scope, Stun) {
+app.controller('StunController', ['$scope', 'Stun', '$http', function($scope, Stun, $http) {
 
 
 
@@ -119,6 +120,22 @@ Stun.then( function(response) {
 	here.tapes = tapeArray;
 	
 });
+
+
+
+
+	this.deleteArtist = function(id) {
+
+		$http.delete('/artists/' + id)
+            .success(function(data) {
+                here.todos = data;
+                console.log(data);
+            })
+            .error(function(data) {
+                console.log('Error: ' + data);
+            }); 
+    };
+
 
 
 
@@ -177,62 +194,44 @@ this.ape = {};
 
 	
 				this.art = artist;
-				console.log(artist);
+			
 
 
 			};
 
 
-		}]); 
 
-
-/*
-
-
-this.addTape = function() {
-
-				var pip = this.art;
-
-
-				var pipp = pip.$id;
-
-var stun = this.stunner
-
-for (i = 0; i < stun.length; i++){
-
-
-				if (stun[i].$id === pipp) {
-				
-					if (!stun[i].tapes) {
-				
-				stun[i].tapes = [this.tape];
-
-
-							} else {
-					var sapes = stun[i].tapes;
-					sapes.push(this.tape);
-
-					 $http.put('/students/' + this.art.id + '/tapes/', this.tape);
-
-
-					} // if
-				
-				
-
-				}// if 
-		
-				
-
-			} // for 
 
 
 	this.tape = {};
 
 
+this.addTape = function() {
+
+				
+
+var pip = this.art;
+			
+var pipId = pip._id;
+
+
+var stun = this.stunner
+ $http.post('/tapes/' + pipId, this.tape);
+
+	this.tape = {};
+
 				
 } 
 
-*/
+
+
+		}]); 
+
+
+
+
+
+
 
 
 

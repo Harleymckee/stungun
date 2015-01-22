@@ -473,7 +473,7 @@ pre {
 .prev2 {
   margin-left: auto;
   margin-right: auto;
-  width: 15%;
+  width: 55%;
   border: 3px solid black;
   margin-bottom: 10px;
   font-size: 1.5em; }
@@ -490,5 +490,17 @@ pre {
   width: 35%;
   margin-bottom: 5px;
   font-size: 12px; }
+
+.delete {
+  font-size: 16px;
+  font: serif;
+  margin-left: 10px;
+  margin-top: 1px;
+  width: 10px;
+  float: left; }
+
+.delete:hover {
+  color: red;
+  cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */

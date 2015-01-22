@@ -4,6 +4,9 @@ var mongoose = require('mongoose');
 var fs = require('fs');
 var app = express();
 
+
+var port = process.env.PORT || 3333;
+
    var bodyParser = require('body-parser');    
   //  var methodOverride = require('method-override'); 
 
@@ -44,7 +47,16 @@ app.get('/admin', function(req, res) {
 });
 
 
+
+
+
+
+
+
+
+
 var theArts = mongoose.model('artists');
+
 
 app.route('/artists')
 
@@ -54,8 +66,8 @@ app.route('/artists')
 	  theArts.create(req.body, function (err, post) {
     	if (err) return next(err);
     	res.json(post);
- 		 });
 
+ 		 });
 
 		})
 
@@ -67,17 +79,58 @@ app.route('/artists')
 	                res.send(err)
 
 			res.send(artists);
-		})
+		});
 
 
-	});
+            });
 
-	app.route('/tapes/:id')
+
+	app.delete('/artists/:id', function(req, res) {
+        theArts.remove({
+            _id : req.param('id')
+        }, function(err, todo) { 
+            if (err)
+                res.send(err);
+        
+
+        theArts.find(function(err, todos) {
+                if (err)
+                    res.send(err)
+                res.json(todos);
+        });
+           
+    });
+
+            });
+        
+ 
+
+
+
+
+
+
+
+
+
+
+
+app.route('/tapes/:id')
 
 
 	.post(function(req, res) {
 
 
+		theArts.findOne( { _id : req.param('id') }, function(err, doc) {
+
+			if (err)
+	                res.send(err)
+ 
+	  	var dapes = doc.tapes;
+	  	dapes.push(req.body);
+	  	doc.save();
+	});
+			
 		})
 
 	.get(function(req, res) {
@@ -87,8 +140,8 @@ app.route('/artists')
 			if (err)
 	                res.send(err)
 
-	     
-			res.send(data);
+	
+			res.send(data[0].tapes);
 		})
 
 
@@ -130,8 +183,6 @@ app.route('/blog')
 
 
 
-
-var port = process.env.PORT || 3333;
 
 app.listen(port, function() {
     console.log('Listening on port %d', port);
