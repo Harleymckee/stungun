@@ -98,7 +98,7 @@ app.route('/artists')
                     res.send(err)
                 res.json(todos);
         });
-           
+
     });
 
             });
