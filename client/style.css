@@ -16,8 +16,12 @@ body {
     padding: 15px;
     display: block;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    -webkit-transition: filter 100ms linear;
+    -webkit-transition: filter 100ms linear; }
   #logo img:hover {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
     cursor: pointer; }
 
 #logo2 {
@@ -30,10 +34,17 @@ body {
     padding-bottom: 15px;
     display: block;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    border-bottom-left-radius: 1em 2em;
+    border-bottom-right-radius: 1em 2em;
+    border-top-left-radius: 1.5em 1em;
+    border-top-right-radius: 1.5em 1em;
+    -webkit-transition: -webkit-filter 100ms linear;
+    transition: filter 100ms linear; }
   #logo2 img:hover {
     -webkit-filter: invert(100%);
-    filter: invert(100%); }
+    filter: invert(100%);
+    cursor: pointer; }
 
 #bodwrap {
   margin-top: 15px;
@@ -194,7 +205,25 @@ body {
   -moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.15);
   box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.15); */
   font-size: 18px;
-  text-align: center; }
+  text-align: center;
+  -webkit-transition: background 100ms linear;
+  -webkit-transition: color 100ms linear;
+  border-bottom-left-radius: 1em 2em;
+  border-bottom-right-radius: 1em 2em;
+  border-top-right-radius: 1em 4em;
+  border-top-left-radius: 2em 1em; }
+
+.naver:nth-child(3) {
+  border-bottom-left-radius: 1em 2em;
+  border-bottom-right-radius: 1em 2em;
+  border-top-left-radius: 1em 4em;
+  border-top-right-radius: 2em 1em; }
+
+.naver:first-child {
+  border-bottom-left-radius: 1em 2em;
+  border-bottom-right-radius: 1em 2em;
+  border-top-left-radius: 1em 4em;
+  border-top-right-radius: 2em 1em; }
 
 .naver:hover, .active {
   cursor: pointer;
@@ -311,10 +340,9 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.55); */
   -webkit-flex-flow: column;
   flex-flow: column;
   margin-top: 30px;
-  padding-bottom: 62px;
-  margin-bottom: 85px;
-  height: 205px;
-  font-size: 36px; }
+  padding-bottom: 30px;
+  margin-bottom: 0px;
+  font-size: 24px; }
   #email img {
     margin-left: auto;
     margin-right: auto;
@@ -322,6 +350,7 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.55); */
     float: center;
     padding-bottom: 5px; }
   #email p {
+    text-align: center;
     margin-top: 5px; }
 
 #blogbut {

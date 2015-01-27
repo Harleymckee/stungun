@@ -32,6 +32,9 @@ html {
 body {
     margin: 0px;
 }
+
+
+$logoan: 100ms;
 #logo {
 
 //margin-left:-3px;
@@ -50,13 +53,15 @@ body {
     margin-right: auto;
 
    // padding-left: 18px;
-    
+      -webkit-transition : filter $logoan linear;
+            -webkit-transition : filter $logoan linear;
 
     }
 
 
     img:hover {     // stungun logo 
-    
+          -webkit-filter:invert(100%);
+      filter:invert(100%);
     cursor: pointer;
 
 
@@ -84,13 +89,21 @@ body {
     margin-left: auto;
     margin-right: auto ;
     //border-radius: 10px;
-    
+  border-bottom-left-radius:1em 2em;
+    border-bottom-right-radius: 1em 2em; 
+       border-top-left-radius: 1.5em 1em; 
+   border-top-right-radius: 1.5em 1em; 
 
+
+   -webkit-transition : -webkit-filter $logoan linear;
+
+   transition : filter $logoan linear;
     }
   
     img:hover {
       -webkit-filter:invert(100%);
       filter:invert(100%);
+          cursor: pointer;
     }
 
     } // #logo  
@@ -369,7 +382,31 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.15); */
 
 text-align: center;
 
+   -webkit-transition : background 100ms linear;
+   -webkit-transition : color 100ms linear;
+
+     border-bottom-left-radius:1em 2em;
+    border-bottom-right-radius: 1em 2em; 
+       border-top-right-radius: 1em 4em; 
+   border-top-left-radius: 2em 1em; 
+
 }
+.naver:nth-child(3) {
+     border-bottom-left-radius:1em 2em;
+    border-bottom-right-radius: 1em 2em; 
+       border-top-left-radius: 1em 4em; 
+   border-top-right-radius: 2em 1em; 
+
+}
+.naver:first-child {
+     border-bottom-left-radius:1em 2em;
+    border-bottom-right-radius: 1em 2em; 
+       border-top-left-radius: 1em 4em; 
+   border-top-right-radius: 2em 1em; 
+
+}
+
+
 
 .naver:hover {
 //    border:2px solid red; 
@@ -574,14 +611,15 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.75);
   }
 
   p {
+    text-align: center;
     margin-top:5px;
   }
   margin-top: 30px;
-  padding-bottom:62px;
-  margin-bottom:85px;
+padding-bottom: 30px;
+margin-bottom: 0px;
 
-  height:$supemail; 
-font-size:36px;
+  
+font-size:24px;
 }
 
 

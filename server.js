@@ -24,7 +24,7 @@ app.use(bodyParser.json());
 //app.use(methodOverride()); 
 
 
-mongoose.connect('mongodb://localhost:27017/stungun');
+mongoose.connect('mongodb://104.236.101.170:27017/stungun');
 
 
 
