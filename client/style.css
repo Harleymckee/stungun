@@ -208,6 +208,10 @@ body {
   text-align: center;
   -webkit-transition: background 100ms linear;
   -webkit-transition: color 100ms linear;
+  transition: background 100ms linear;
+  transition: color 100ms linear;
+  -webkit-transition: box-shadow 50ms linear;
+  transition: box-shadow 50ms linear;
   border-bottom-left-radius: 1em 2em;
   border-bottom-right-radius: 1em 2em;
   border-top-right-radius: 1em 4em;
@@ -227,9 +231,9 @@ body {
 
 .naver:hover, .active {
   cursor: pointer;
-   /*     -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
--moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.55);
-box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.55); */
+  -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
+  -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
+  box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
   color: white;
   background: black; }
 

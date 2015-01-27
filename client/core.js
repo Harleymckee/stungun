@@ -107,12 +107,26 @@ Stun.then( function(response) {
 	var tapeArray = [];
 	for (i = 0; i < arr.length; i++) {
 		var tapes = arr[i].tapes;
+
 		if (tapes.length > 0) {
 			
-			for (t = 0; t < tapes.length; t++)
+
+
+			
+			for (t = 0; t < tapes.length; t++) {
+
+
 				var tape = tapes[t];
+		
 			tapeArray.push(tape);
+
+				} 
+
+
+
 		}
+
+
 
 	}
 
