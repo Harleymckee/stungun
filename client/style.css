@@ -298,6 +298,19 @@ body {
     -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
     box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25); }
 
+.tape2 {
+  margin-top: 20px;
+  width: 100%; }
+  .tape2 img.prof2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 338px;
+    width: 260px;
+    -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+    -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25);
+    box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25); }
+
 .artist {
   margin-top: 10px;
   margin-bottom: -3px; }
@@ -508,7 +521,7 @@ pre {
 .prev2 {
   margin-left: auto;
   margin-right: auto;
-  width: 55%;
+  width: 17%;
   border: 3px solid black;
   margin-bottom: 10px;
   font-size: 1.5em; }

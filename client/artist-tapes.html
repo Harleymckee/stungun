@@ -57,9 +57,10 @@ Add Tape
 
 </h2>
 
+
 <div id="tapwrap" ng-show="tapp">
 <div class="post">
-
+<h5 align="center"> Who's it by? </h5>
 <div class="prev2" ng-repeat="stunah in atpostCtrl.stunner" ng-click="atpostCtrl.clkArt(stunah)" ng-class="{active: stunah === atpostCtrl.art}">
 
 
@@ -88,6 +89,14 @@ Reset
 
 
 
+<div  class="tape2">
+
+
+							<a ng-href="{{atpostCtrl.tape.storeurl}}">
+							<img class="prof2" ng-if="atpostCtrl.tape.imgurl" src="{{atpostCtrl.tape.imgurl}}">
+							</a>
+
+</div>
 
 
 
