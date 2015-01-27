@@ -27,6 +27,7 @@ body {
   background-color: transparent;
   left: 0px; }
   #logo2 img {
+    margin-top: 15px;
     padding-bottom: 15px;
     display: block;
     margin-left: auto;
@@ -178,29 +179,29 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   -webkit-justify-content: center;
+  margin-left: 18px;
   margin-top: -20px;
   margin-bottom: -5px; }
 
 .naver {
-  padding-top: 9px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;
   margin: 10px;
   max-height: 40px;
-  -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.15);
-  -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.15);
-  box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.15);
-  font-size: 28px;
-  border: 3px solid black; }
+  /*  -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.15);
+  -moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.15);
+  box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.15); */
+  font-size: 18px;
+  text-align: center; }
 
 .naver:hover, .active {
   cursor: pointer;
   -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
   -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
   box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
-  color: white;
-  background: black; }
+  color: white; }
 
 #supguys {
   display: none;
@@ -325,7 +326,7 @@ body {
 #blogbut {
   margin-left: auto;
   margin-right: auto;
-  width: 80px;
+  width: 50px;
   text-align: center; }
 
 #blog {

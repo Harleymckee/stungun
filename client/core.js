@@ -52,6 +52,7 @@ app.factory('Stun', ['$http', function($http) {
 		};
 	});
 
+
 		app.directive('blogPoster', function() {
 		return {
 
