@@ -8,7 +8,6 @@ body {
   margin: 0px; }
 
 #logo {
-  margin-left: -3px;
   margin-top: -19px;
   width: 100%;
   background-color: transparent;
@@ -179,7 +178,8 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   -webkit-justify-content: center;
-  margin-left: 18px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: -20px;
   margin-bottom: -5px; }
 
@@ -198,10 +198,11 @@ body {
 
 .naver:hover, .active {
   cursor: pointer;
-  -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
-  -moz-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
-  box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
-  color: white; }
+   /*     -webkit-box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.55);
+-moz-box-shadow:    1px 1px 30px 10px rgba(47, 50, 50, 0.55);
+box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.55); */
+  color: white;
+  background: black; }
 
 #supguys {
   display: none;

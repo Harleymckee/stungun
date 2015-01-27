@@ -27,6 +27,19 @@
 							</div>
 
 
+							<div class="naver colors" ng-click="stun.selectTab(3)" ng-class="{active: stun.isSelected(3)}">
+							BLOG
+							</div>
+
+
+
+
+							<div class="naver colors" ng-click="stun.selectTab(4)" ng-class="{active: stun.isSelected(4)}">
+							CONTACT
+							</div>
+
+
+
 
 				</div>
 
@@ -122,10 +135,52 @@ Sup Guys
 
 
 
+<div id="blog" ng-show="stun.isSelected(3)">
+
+					
+							<div class="postend"></div> 
+
+							<div class="post" ng-repeat="bloggah in stun.blogger | backwards ">
+
+
+							<h2 align="center">{{bloggah.head}}</h2> 
+							<h4 align="center"> {{bloggah.date}} </h4>
+
+							<p >
+						
+							{{bloggah.body1}}
+						
+							</p>
+							<div class="blogimg">
+							<img ng-src="{{bloggah.img1}}" ng-show="bloggah.img1">
+							</div>
+							<p ng-show="bloggah.body2">
+							
+							{{bloggah.body2}}
+							
+							</p>
+							<div class="blogimg">
+							<img ng-src="{{bloggah.img2}}" ng-show="bloggah.img2">
+							</div>
+							<p ng-show="bloggah.body3">
+							
+							{{bloggah.body3}}
+							
+
+							</p>
+						<div class="postend"></div> 
 
 
 
-<div id="email" class="animate-show" ng-show="stun.isSelected(3)">
+							</div> 
+							
+
+
+
+</div>
+
+
+<div id="email" class="animate-show" ng-show="stun.isSelected(4)">
 <img src="http://media.giphy.com/media/5t8WBZIVID7oI/giphy.gif" width="140px" height="140px"/>
 <p align="center">
 Anything:

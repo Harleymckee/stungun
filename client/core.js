@@ -149,6 +149,18 @@ $http.delete('/artists/' + id)
 
 
 
+var here = this;
+
+$http.get('/blog')
+.then( function(response) {
+
+//console.log(response.data);
+here.blogger = response.data;
+
+	});
+
+
+
 
 	}]);
 
