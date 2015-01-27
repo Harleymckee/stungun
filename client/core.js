@@ -41,7 +41,7 @@ app.factory('Stun', ['$http', function($http) {
 		};
 	});
 
-		app.directive('theBlog', function() {
+	/*	app.directive('theBlog', function() {
 		return {
 
 			restrict: 'E',
@@ -51,7 +51,7 @@ app.factory('Stun', ['$http', function($http) {
 
 		};
 	});
-
+*/
 
 		app.directive('blogPoster', function() {
 		return {
@@ -148,8 +148,8 @@ $http.delete('/artists/' + id)
     };
 
 
+ //blog
 
-var here = this;
 
 $http.get('/blog')
 .then( function(response) {
@@ -164,7 +164,7 @@ here.blogger = response.data;
 
 	}]);
 
-
+/*
 
 
 app.controller('BlogController', ['$scope', '$http', function($scope, $http) {	
@@ -184,8 +184,7 @@ here.blogger = response.data;
 
 
 
-	}]);
-
+	}]); */
 
 
 app.controller('AtpostController', ['$scope', '$http', function($scope, $http) {	
@@ -292,8 +291,8 @@ var dOutput =
 
 
 
-this.blug.img1 = "";
-this.blug.img2 = "";
+//this.blug.img1 = "";
+//this.blug.img2 = "";
 	this.blug = {};
 	}
 
