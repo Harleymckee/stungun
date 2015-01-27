@@ -142,8 +142,8 @@ Sup Guys
 
 							<div class="post" ng-repeat="bloggah in stun.blogger | backwards ">
 
-
-							<h2 align="center">{{bloggah.head}}</h2> 
+	
+							<h2 align="center">{{bloggah.head}} </h2> 
 							<h4 align="center"> {{bloggah.date}} </h4>
 
 							<p >
@@ -168,9 +168,12 @@ Sup Guys
 							
 
 							</p>
-						<div class="postend"></div> 
+						<div class="postend"></div>
 
+							<a href="/admin"> <div ng-click="stun.deletePost(bloggah._id)" class="delete2">delete post</div></a></div> 
 
+	
+	
 
 							</div> 
 							

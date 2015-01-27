@@ -88,15 +88,15 @@ app.route('/artists')
 	app.delete('/artists/:id', function(req, res) {
         theArts.remove({
             _id : req.param('id')
-        }, function(err, todo) { 
+        }, function(err, artist) { 
             if (err)
                 res.send(err);
         
 
-        theArts.find(function(err, todos) {
+        theArts.find(function(err, artists) {
                 if (err)
                     res.send(err)
-                res.json(todos);
+                res.json(artists);
         });
 
     });
@@ -169,16 +169,36 @@ app.route('/blog')
 
 	.get(function(req, res) {
 
-		theMedia.find(function(err, blog) {
+		theMedia.find(function(err, blogs) {
 
 			if (err)
 	                res.send(err)
 	           
-			res.send(blog); 
+			res.send(blogs); 
 		});
 
 	});
 
+
+ 
+
+	app.delete('/blog/:id', function(req, res) {
+        theMedia.remove({
+            _id : req.param('id')
+        }, function(err, blog) { 
+            if (err)
+                res.send(err);
+        
+
+        theMedia.find(function(err, blogs) {
+                if (err)
+                    res.send(err)
+                res.json(blogs);
+        });
+
+    });
+
+            });
 
 
 

@@ -534,6 +534,18 @@ pre {
   color: red;
   cursor: pointer; }
 
+.delete2 {
+  font-size: 16px;
+  font: serif;
+  margin-left: 10px;
+  margin-top: -90px;
+  width: 10px;
+  float: right; }
+
+.delete2:hover {
+  color: red;
+  cursor: pointer; }
+
 .adminBut:hover {
   cursor: pointer; }
 

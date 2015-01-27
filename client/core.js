@@ -162,6 +162,32 @@ here.blogger = response.data;
 
 
 
+
+
+	this.deletePost = function(id) {
+
+		if (confirm('Are ya sure?')) {
+
+$http.delete('/blog/' + id)
+            .success(function(data) {
+                here.todos = data;
+                console.log(data);
+            })
+            .error(function(data) {
+                console.log('Error: ' + data);
+            }); 
+
+
+
+} else {
+    return;
+}
+
+		
+    };
+
+
+
 	}]);
 
 /*
