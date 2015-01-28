@@ -1,7 +1,7 @@
 //@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed);
 
 html {
- background:url(imgs/ben1.jpg) 50% 0 repeat fixed; 
+ background:white;//url(imgs/ben1.jpg) 50% 0 repeat fixed; 
    background-position: center bottom;
   background-size: cover;
 
@@ -60,8 +60,8 @@ $logoan: 100ms;
 
 
     img:hover {     // stungun logo 
-          -webkit-filter:invert(100%);
-      filter:invert(100%);
+        //  -webkit-filter:invert(100%);
+      //filter:invert(100%);
     cursor: pointer;
 
 
@@ -82,7 +82,7 @@ $logoan: 100ms;
 
 
     img {     // stungun logo 
-      margin-top: 15px;
+      margin-top: 25px;
         padding-bottom: 15px;
 
     display: block;
@@ -94,15 +94,19 @@ $logoan: 100ms;
        border-top-left-radius: 1.5em 1em; 
    border-top-right-radius: 1.5em 1em; 
 
+    -webkit-filter:invert(100%);
+      filter:invert(100%);
 
    -webkit-transition : -webkit-filter $logoan linear;
 
    transition : filter $logoan linear;
+       -ms-transform: rotate(175deg); /* IE 9 */
+    -webkit-transform: rotate(175deg); /* Chrome, Safari, Opera */
+    transform: rotate(175deg);
     }
   
     img:hover {
-      -webkit-filter:invert(100%);
-      filter:invert(100%);
+  
           cursor: pointer;
     }
 
@@ -555,7 +559,7 @@ box-shadow:         1px 1px 30px 10px rgba(47, 50, 50, 0.25);
 .artist {
 
 
-   margin-top:10px;
+   margin-top:25px;
       margin-bottom:-3px;
     img.prof {
 //     border:2px solid black;

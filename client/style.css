@@ -1,5 +1,5 @@
 html {
-  background: url(imgs/ben1.jpg) 50% 0 repeat fixed;
+  background: white;
   background-position: center bottom;
   background-size: cover;
   font-family: 'Roboto Condensed', sans-serif; }
@@ -20,8 +20,6 @@ body {
     -webkit-transition: filter 100ms linear;
     -webkit-transition: filter 100ms linear; }
   #logo img:hover {
-    -webkit-filter: invert(100%);
-    filter: invert(100%);
     cursor: pointer; }
 
 #logo2 {
@@ -30,7 +28,7 @@ body {
   background-color: transparent;
   left: 0px; }
   #logo2 img {
-    margin-top: 15px;
+    margin-top: 25px;
     padding-bottom: 15px;
     display: block;
     margin-left: auto;
@@ -39,11 +37,16 @@ body {
     border-bottom-right-radius: 1em 2em;
     border-top-left-radius: 1.5em 1em;
     border-top-right-radius: 1.5em 1em;
-    -webkit-transition: -webkit-filter 100ms linear;
-    transition: filter 100ms linear; }
-  #logo2 img:hover {
     -webkit-filter: invert(100%);
     filter: invert(100%);
+    -webkit-transition: -webkit-filter 100ms linear;
+    transition: filter 100ms linear;
+    -ms-transform: rotate(175deg);
+    /* IE 9 */
+    -webkit-transform: rotate(175deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(175deg); }
+  #logo2 img:hover {
     cursor: pointer; }
 
 #bodwrap {
@@ -312,7 +315,7 @@ body {
     box-shadow: 1px 1px 30px 10px rgba(47, 50, 50, 0.25); }
 
 .artist {
-  margin-top: 10px;
+  margin-top: 25px;
   margin-bottom: -3px; }
   .artist img.prof {
     margin-left: 20px;
