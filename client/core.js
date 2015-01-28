@@ -41,17 +41,8 @@ app.factory('Stun', ['$http', function($http) {
 		};
 	});
 
-	/*	app.directive('theBlog', function() {
-		return {
 
-			restrict: 'E',
-			templateUrl: 'the-blog.html',
-			controller: 'BlogController',
-			controllerAs: 'blogCtrl' 
 
-		};
-	});
-*/
 
 		app.directive('blogPoster', function() {
 		return {
