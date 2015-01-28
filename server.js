@@ -135,17 +135,42 @@ app.route('/tapes/:id')
 
 	.get(function(req, res) {
 
-		theArts.find({ _id : req.param('id') }, function(err, data) {
+		var eyeD = req.param('id');
+
+		theArts.find( { _id : eyeD }, function(err, data) {
 
 			if (err)
 	                res.send(err)
 
-	
+	console.log(data);
 			res.send(data[0].tapes);
 		})
 
 
 	});
+
+
+   
+
+
+	app.delete('/tapes/:id', function(req, res) {
+        theArts.update({}, {$pull: {'tapes': { '_id' : req.param('id') }}}, {multi: true} , function(err, tapes) { 
+
+        
+            if (err)
+                res.send(err);
+        
+
+        theArts.find(function(err, tapes) {
+                if (err)
+                    res.send(err)
+                res.json(tapes);
+        });
+
+    });
+
+            });
+        
 
 
 

@@ -145,7 +145,7 @@ Stun.then( function(response) {
 
 $http.delete('/artists/' + id)
             .success(function(data) {
-                here.todos = data;
+                //here.stunner = data;
                 console.log(data);
             })
             .error(function(data) {
@@ -160,6 +160,31 @@ $http.delete('/artists/' + id)
 
 		
     };
+
+
+
+	this.deleteTape = function(id) {
+
+		if (confirm('Are ya sure?')) {
+
+$http.delete('/tapes/' + id)
+            .success(function(data) {
+                //here.todos = data;
+                console.log(data);
+            })
+            .error(function(data) {
+                console.log('Error: ' + data);
+            }); 
+
+
+
+} else {
+    return;
+}
+
+		
+    };
+
 
 
  //blog
