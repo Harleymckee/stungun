@@ -5,8 +5,6 @@ var fs = require('fs');
 var app = express();
 
 
-var port = process.env.PORT || 3333;
-
    var bodyParser = require('body-parser');    
   //  var methodOverride = require('method-override'); 
 
@@ -227,6 +225,7 @@ app.route('/blog')
 
 
 
+var port = process.env.PORT || 3333;
 
 
 app.listen(port, function() {
