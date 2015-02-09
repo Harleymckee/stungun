@@ -225,7 +225,7 @@ app.route('/blog')
 
 
 
-var port = process.env.PORT || 3333; //80
+var port = process.env.PORT || 80; //80
 
 
 app.listen(port, function() {
